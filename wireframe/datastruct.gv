@@ -1,0 +1,453 @@
+digraph {
+	graph [
+		rankdir="LR"
+		fontname="Roboto"
+		splines=ortho
+		outputorder="nodesfirst"
+		ranksep=2
+	];
+	node [
+		fontsize="12"
+		shape=plaintext
+		fontname="Roboto"
+		margin=0
+		shape=none
+	];
+
+	subgraph cluster_9d6322c1f4 {
+		label="Login"
+		bgcolor="lightblue"
+
+		_9d6322c1f4 [label="" fixedsize=shape width=0 height=0]
+
+		subgraph cluster_290826c5a0 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_290826c5a0 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" ALIGN="TEXT">Group Login</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_ce6d39a81f [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_ce6d39a81f"><IMG SRC="Login_Group_Login_Group_Name.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+	}
+
+	subgraph cluster_32d7e82082 {
+		label="Control"
+		bgcolor="lightblue"
+
+		_32d7e82082 [label="" fixedsize=shape width=0 height=0]
+
+		subgraph cluster_0b4b1a2af6 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_0b4b1a2af6 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" ALIGN="TEXT">Main</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_17be39b322 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_17be39b322"><IMG SRC="Control_Main_Add_New_Record.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_813090fd70 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_813090fd70"><IMG SRC="Control_Main_Next_Site_Record_ID.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_7898d02343 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_7898d02343"><IMG SRC="Control_Main_List_of_Sites.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_b5348d5536 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_b5348d5536 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Search</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_98a8f05303 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_b5348d5536"><IMG SRC="Control_Search_Search_Term.svg"></IMG></TD>
+						<TD PORT="_b5348d5536"><IMG SRC="Control_Search_Search_Button.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_18e4ee8dff [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_18e4ee8dff"><IMG SRC="Control_Search_Entity_Types.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_89e10496a5 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_89e10496a5"><IMG SRC="Control_Search_Entity_List.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+	}
+
+	subgraph cluster_fa7955814e {
+		label="Site"
+		bgcolor="lightblue"
+
+		_fa7955814e [label="" fixedsize=shape width=0 height=0]
+
+		subgraph cluster_4389182c79 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_4389182c79 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" ALIGN="TEXT">Site Info</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_a76bdc8d1c [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_a76bdc8d1c"><IMG SRC="Site_Site_Info_Site_Name.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_44032b351f [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_4389182c79"><IMG SRC="Site_Site_Info_Latitude.svg"></IMG></TD>
+						<TD PORT="_4389182c79"><IMG SRC="Site_Site_Info_Northing.svg"></IMG></TD>
+					</TR>
+					<TR>
+						<TD PORT="_4389182c79"><IMG SRC="Site_Site_Info_Longitude.svg"></IMG></TD>
+						<TD PORT="_4389182c79"><IMG SRC="Site_Site_Info_Easting.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_4e238c95ad [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_4e238c95ad"><IMG SRC="Site_Site_Info_Take_From_GPS.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_8f290e07d1 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_8f290e07d1"><IMG SRC="Site_Site_Info_Comments.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_186dab5c1c [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_186dab5c1c"><IMG SRC="Site_Site_Info_Add_New_Record.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+	}
+
+	subgraph cluster_24b7c6bf20 {
+		label="Site Record"
+		bgcolor="lightblue"
+
+		_24b7c6bf20 [label="" fixedsize=shape width=0 height=0]
+
+		subgraph cluster_ee840ff0cb {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_ee840ff0cb [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" ALIGN="TEXT">Record</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_57d93fd015 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_57d93fd015"><IMG SRC="Site_Record_Record_Site_Name.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_b356b9ce34 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_b356b9ce34"><IMG SRC="Site_Record_Record_Site_Record_ID.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_ae9fe090c8 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_ae9fe090c8"><IMG SRC="Site_Record_Record_Author.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_f327002956 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_f327002956"><IMG SRC="Site_Record_Record_Data_recorded_by.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_43b45c9b58 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_43b45c9b58"><IMG SRC="Site_Record_Record_Check_in.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_1911d093ba [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_1911d093ba"><IMG SRC="Site_Record_Record_Time_checked_in.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_38beb67bcd [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_38beb67bcd"><IMG SRC="Site_Record_Record_Check_out.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_eb9aad944a [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_eb9aad944a"><IMG SRC="Site_Record_Record_Time_Checked_out.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_83b76b6a7d [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_83b76b6a7d"><IMG SRC="Site_Record_Record_Last_Rainfall.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_64f804cfa4 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_64f804cfa4"><IMG SRC="Site_Record_Record_Rainfall_Description.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_0086c2c5d3 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_0086c2c5d3"><IMG SRC="Site_Record_Record_Flow_magnitude.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_7595494bef [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_7595494bef"><IMG SRC="Site_Record_Record_Observation.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_718514ad1f {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_718514ad1f [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Parameters</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_bf6374faec [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Available_Phosphate_mg_L.svg"></IMG></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_AP_Exception.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_1a3c4ded67 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Dissolved_Oxygen_mh_L.svg"></IMG></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_DO_Exception.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_566d150606 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Ecoli_Petrifilm_CFU_100mL.svg"></IMG></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Ecoli_Exception.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_b1ea556d7a [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Electrical_Conductivity.svg"></IMG></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_EC_Units.svg"></IMG></TD>
+					</TR>
+					<TR>
+						<TD></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_EC_Exception.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_6a6ab331bb [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Turbidity_NTU.svg"></IMG></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Turb_NTU_Exception.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_5e0a1e47c3 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Turbidity_FTU_FAU.svg"></IMG></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Turb_FTU_FAU_Exception.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_47b72920c0 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Temperature_C.svg"></IMG></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Temp_Exception.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_4e43178b08 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_pH.svg"></IMG></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_pH_Exception.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_83f72f341b [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Nitrate_mg_L.svg"></IMG></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_NO3_Exception.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_f7ab1cd6dd [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Other_Test_Name.svg"></IMG></TD>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Other_Test_Exception.svg"></IMG></TD>
+					</TR>
+					<TR>
+						<TD PORT="_718514ad1f"><IMG SRC="Site_Record_Parameters_Other_Test_Values.svg"></IMG></TD>
+						<TD></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_052360dcdd [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_052360dcdd"><IMG SRC="Site_Record_Parameters_Comments.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+	}
+
+	/* Intra-tab, label-to-label links */
+	struct_Label_0b4b1a2af6 -> struct_Label_b5348d5536
+	struct_Label_ee840ff0cb -> struct_Label_718514ad1f
+	/* Graph-constraining links */
+	_9d6322c1f4 -> _32d7e82082 [style=invis]
+	_32d7e82082 -> _fa7955814e [style=invis]
+	_fa7955814e -> _24b7c6bf20 [style=invis]
+	/* User-specified links */
+	struct_Elems_ce6d39a81f:_ce6d39a81f -> struct_Label_0b4b1a2af6 [constraint=false]
+	struct_Elems_17be39b322:_17be39b322 -> struct_Label_4389182c79 [constraint=false]
+	struct_Elems_186dab5c1c:_186dab5c1c -> struct_Label_ee840ff0cb [constraint=false]
+}

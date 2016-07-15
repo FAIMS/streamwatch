@@ -1,0 +1,612 @@
+<?xml version="1.0"?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Fill This In</h:title>
+    <model>
+      <instance>
+        <faims id="Fill_This_In">
+          <style>
+            <orientation>
+              <orientation/>
+            </orientation>
+            <even>
+              <layout_weight/>
+            </even>
+            <large>
+              <layout_weight/>
+            </large>
+          </style>
+          <Login>
+            <Group_Login>
+              <Group_Name/>
+            </Group_Login>
+          </Login>
+          <Control>
+            <Main>
+              <Add_New_Record/>
+              <Next_Site_Record_ID/>
+              <List_of_Sites/>
+            </Main>
+            <Search>
+              <Colgroup_0>
+                <Col_0>
+                  <Search_Term/>
+                </Col_0>
+                <Col_1>
+                  <Search_Button/>
+                </Col_1>
+              </Colgroup_0>
+              <Entity_Types/>
+              <Entity_List/>
+            </Search>
+          </Control>
+          <Site>
+            <Site_Info>
+              <Site_Name/>
+              <Colgroup_GPS_0>
+                <Col_0>
+                  <Latitude/>
+                </Col_0>
+                <Col_1>
+                  <Longitude/>
+                </Col_1>
+              </Colgroup_GPS_0>
+              <Colgroup_GPS_1>
+                <Col_0>
+                  <Northing/>
+                </Col_0>
+                <Col_1>
+                  <Easting/>
+                </Col_1>
+                <Col_2>
+                  <Accuracy/>
+                </Col_2>
+              </Colgroup_GPS_1>
+              <Take_From_GPS/>
+              <Comments/>
+              <Add_New_Record/>
+            </Site_Info>
+          </Site>
+          <Site_Record>
+            <Record>
+              <Site_Name/>
+              <Site_Record_ID/>
+              <author/>
+              <Data_recorded_by/>
+              <Check_in/>
+              <Time_checked_in/>
+              <Check_out/>
+              <Time_Checked_out/>
+              <Last_Rainfall/>
+              <Rainfall_Description/>
+              <Flow_magnitude/>
+              <Observation/>
+            </Record>
+            <Parameters>
+              <Colgroup_0>
+                <Col_0>
+                  <Available_Phosphate_mg_L/>
+                </Col_0>
+                <Col_1>
+                  <AP_Exception/>
+                </Col_1>
+              </Colgroup_0>
+              <Colgroup_1>
+                <Col_0>
+                  <Dissolved_Oxygen_mh_L/>
+                </Col_0>
+                <Col_1>
+                  <DO_Exception/>
+                </Col_1>
+              </Colgroup_1>
+              <Colgroup_2>
+                <Col_0>
+                  <Ecoli_Petrifilm_CFU_100mL/>
+                </Col_0>
+                <Col_1>
+                  <Ecoli_Exception/>
+                </Col_1>
+              </Colgroup_2>
+              <Colgroup_3>
+                <Col_0>
+                  <Electrical_Conductivity/>
+                </Col_0>
+                <Col_1>
+                  <EC_Units/>
+                  <EC_Exception/>
+                </Col_1>
+              </Colgroup_3>
+              <Colgroup_4>
+                <Col_0>
+                  <Turbidity_NTU/>
+                </Col_0>
+                <Col_1>
+                  <Turb_NTU_Exception/>
+                </Col_1>
+              </Colgroup_4>
+              <Colgroup_5>
+                <Col_0>
+                  <Turbidity_FTU_FAU/>
+                </Col_0>
+                <Col_1>
+                  <Turb_FTU_FAU_Exception/>
+                </Col_1>
+              </Colgroup_5>
+              <Colgroup_6>
+                <Col_0>
+                  <Temperature_C/>
+                </Col_0>
+                <Col_1>
+                  <Temp_Exception/>
+                </Col_1>
+              </Colgroup_6>
+              <Colgroup_7>
+                <Col_0>
+                  <pH/>
+                </Col_0>
+                <Col_1>
+                  <pH_Exception/>
+                </Col_1>
+              </Colgroup_7>
+              <Colgroup_8>
+                <Col_0>
+                  <Nitrate_mg_L/>
+                </Col_0>
+                <Col_1>
+                  <NO3_Exception/>
+                </Col_1>
+              </Colgroup_8>
+              <Colgroup_9>
+                <Col_0>
+                  <Other_Test_Name/>
+                  <Other_Test_Values/>
+                </Col_0>
+                <Col_1>
+                  <Other_Test_Exception/>
+                </Col_1>
+              </Colgroup_9>
+              <Comments/>
+            </Parameters>
+          </Site_Record>
+        </faims>
+      </instance>
+      <bind type="decimal" nodeset="/faims/Control/Main/Next_Site_Record_ID"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Record/Site_Record_ID"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Parameters/Colgroup_0/Col_0/Available_Phosphate_mg_L"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Parameters/Colgroup_1/Col_0/Dissolved_Oxygen_mh_L"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Parameters/Colgroup_2/Col_0/Ecoli_Petrifilm_CFU_100mL"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Parameters/Colgroup_3/Col_0/Electrical_Conductivity"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Parameters/Colgroup_4/Col_0/Turbidity_NTU"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Parameters/Colgroup_5/Col_0/Turbidity_FTU_FAU"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Parameters/Colgroup_6/Col_0/Temperature_C"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Parameters/Colgroup_7/Col_0/pH"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Parameters/Colgroup_8/Col_0/Nitrate_mg_L"/>
+      <bind type="decimal" nodeset="/faims/Site_Record/Parameters/Colgroup_9/Col_0/Other_Test_Values"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="style">
+      <label/>
+      <group ref="orientation">
+        <label/>
+        <input ref="orientation">
+          <label>horizontal</label>
+        </input>
+      </group>
+      <group ref="even">
+        <label/>
+        <input ref="layout_weight">
+          <label>1</label>
+        </input>
+      </group>
+      <group ref="large">
+        <label/>
+        <input ref="layout_weight">
+          <label>3</label>
+        </input>
+      </group>
+    </group>
+    <group ref="Login">
+      <label>{Login}</label>
+      <group ref="Group_Login" faims_scrollable="false">
+        <label>{Group_Login}</label>
+        <select1 appearance="compact" ref="Group_Name">
+          <label>{Group_Name}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <group ref="Control">
+      <label>{Control}</label>
+      <group ref="Main">
+        <label>{Main}</label>
+        <trigger ref="Add_New_Record">
+          <label>{Add_New_Record}</label>
+        </trigger>
+        <input ref="Next_Site_Record_ID" faims_style_class="required">
+          <label>{Next_Site_Record_ID}</label>
+        </input>
+        <select1 appearance="compact" ref="List_of_Sites" faims_annotation="false" faims_certainty="false">
+          <label>{List_of_Sites}</label>
+          <!--WARNING: No type t was given for this view; assuming it is a list-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="Search" faims_scrollable="false">
+        <label>{search}</label>
+        <group faims_style="orientation" ref="Colgroup_0">
+          <label/>
+          <group faims_style="even" ref="Col_0">
+            <label/>
+            <input ref="Search_Term">
+              <label>{Search_Term}</label>
+            </input>
+          </group>
+          <group faims_style="large" ref="Col_1">
+            <label/>
+            <trigger ref="Search_Button">
+              <label>{Search}</label>
+            </trigger>
+          </group>
+        </group>
+        <select1 ref="Entity_Types">
+          <label>{Entity_Types}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select1 appearance="compact" ref="Entity_List">
+          <label>{Entity_List}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <group ref="Site" faims_archent_type="Site">
+      <label>{Site}</label>
+      <group ref="Site_Info">
+        <label>{Site_Info}</label>
+        <input faims_attribute_type="measure" ref="Site_Name" faims_attribute_name="Site Name">
+          <label>{Site_Name}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <group ref="Colgroup_GPS_0" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input ref="Latitude" faims_attribute_name="Latitude" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+              <label>{Latitude}</label>
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input ref="Longitude" faims_attribute_name="Longitude" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+              <label>{Longitude}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_GPS_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input ref="Northing" faims_attribute_name="Northing" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+              <label>{Northing}</label>
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input ref="Easting" faims_attribute_name="Easting" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+              <label>{Easting}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input ref="Accuracy" faims_attribute_name="Accuracy" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+              <label>{Accuracy}</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="Take_From_GPS">
+          <label>{Take_From_GPS}</label>
+        </trigger>
+        <input faims_attribute_type="measure" ref="Comments" faims_attribute_name="Comments">
+          <label>{Comments}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <trigger ref="Add_New_Record">
+          <label>{Add_New_Record}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Site_Record" faims_archent_type="Site Record">
+      <label>{Site_Record}</label>
+      <group ref="Record">
+        <label>{Record}</label>
+        <input faims_attribute_type="measure" ref="Site_Name" faims_attribute_name="Site Name">
+          <label>{Site_Name}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Site_Record_ID" faims_attribute_name="Site Record ID">
+          <label>{Site_Record_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input ref="author" faims_attribute_name="Site_Record author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{Recorded_by_Group}</label>
+          <!--WARNING: Flags ignored-->
+        </input>
+        <input faims_attribute_type="measure" ref="Data_recorded_by" faims_attribute_name="Data recorded by">
+          <label>{Data_recorded_by}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <trigger ref="Check_in">
+          <label>{Check_in}</label>
+        </trigger>
+        <input faims_attribute_type="measure" ref="Time_checked_in" faims_attribute_name="Time checked in">
+          <label>{Time_checked_in}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Check_out" faims_attribute_name="Check out">
+          <label>{Check_out}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Time_Checked_out" faims_attribute_name="Time Checked out">
+          <label>{Time_Checked_out}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Last_Rainfall" faims_attribute_name="Last Rainfall">
+          <label>{Last_Rainfall}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Rainfall_Description" faims_attribute_name="Rainfall Description">
+          <label>{Rainfall_Description}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Flow_magnitude" faims_attribute_name="Flow magnitude">
+          <label>{Flow_magnitude}</label>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Observation" faims_attribute_name="Observation">
+          <label>{Observation}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Parameters">
+        <label>{Parameters}</label>
+        <group ref="Colgroup_0" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="Available_Phosphate_mg_L" faims_attribute_name="Available Phosphate mg L">
+              <label>{Available_Phosphate__mg_L_}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="AP_Exception" faims_attribute_name="AP Exception">
+              <label>{AP_Exception}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+          </group>
+        </group>
+        <group ref="Colgroup_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="Dissolved_Oxygen_mh_L" faims_attribute_name="Dissolved Oxygen mh L">
+              <label>{Dissolved_Oxygen__mh_L_}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="DO_Exception" faims_attribute_name="DO Exception">
+              <label>{DO_Exception}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+          </group>
+        </group>
+        <group ref="Colgroup_2" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="Ecoli_Petrifilm_CFU_100mL" faims_attribute_name="Ecoli Petrifilm CFU 100mL">
+              <label>{Ecoli___Petrifilm__CFU_100mL_}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="Ecoli_Exception" faims_attribute_name="Ecoli Exception">
+              <label>{Ecoli_Exception}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+          </group>
+        </group>
+        <group ref="Colgroup_3" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="Electrical_Conductivity" faims_attribute_name="Electrical Conductivity">
+              <label>{Electrical_Conductivity}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="EC_Units" faims_attribute_name="EC Units">
+              <label>{EC_Units}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="EC_Exception" faims_attribute_name="EC Exception">
+              <label>{EC_Exception}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+          </group>
+        </group>
+        <group ref="Colgroup_4" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="Turbidity_NTU" faims_attribute_name="Turbidity NTU">
+              <label>{Turbidity__NTU_}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="Turb_NTU_Exception" faims_attribute_name="Turb NTU Exception">
+              <label>{Turb__NTU_Exception}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+          </group>
+        </group>
+        <group ref="Colgroup_5" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="Turbidity_FTU_FAU" faims_attribute_name="Turbidity FTU FAU">
+              <label>{Turbidity__FTU_FAU_}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="Turb_FTU_FAU_Exception" faims_attribute_name="Turb FTU FAU Exception">
+              <label>{Turb__FTU_FAU_Exception}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+          </group>
+        </group>
+        <group ref="Colgroup_6" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="Temperature_C" faims_attribute_name="Temperature C">
+              <label>{Temperature___C_}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="Temp_Exception" faims_attribute_name="Temp Exception">
+              <label>{Temp__Exception}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+          </group>
+        </group>
+        <group ref="Colgroup_7" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="pH" faims_attribute_name="pH">
+              <label>{pH}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="pH_Exception" faims_attribute_name="pH Exception">
+              <label>{pH_Exception}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+          </group>
+        </group>
+        <group ref="Colgroup_8" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="Nitrate_mg_L" faims_attribute_name="Nitrate mg L">
+              <label>{Nitrate__mg_L_}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="NO3_Exception" faims_attribute_name="NO3 Exception">
+              <label>{NO3_Exception}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+          </group>
+        </group>
+        <group ref="Colgroup_9" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="Other_Test_Name" faims_attribute_name="Other Test Name">
+              <label>{Other_Test_Name}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+            <input faims_attribute_type="measure" ref="Other_Test_Values" faims_attribute_name="Other Test Values">
+              <label>{Other_Test_Values}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 appearance="full" faims_attribute_type="vocab" ref="Other_Test_Exception" faims_attribute_name="Other Test Exception">
+              <label>{Other_Test_Exception}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>0</value>
+              </item>
+            </select1>
+          </group>
+        </group>
+        <input faims_attribute_type="measure" ref="Comments" faims_attribute_name="Comments">
+          <label>{Comments}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+    </group>
+  </h:body>
+</h:html>

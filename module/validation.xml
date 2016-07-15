@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ValidationSchema>
+  <ArchaeologicalElement name="Site"/>
+  <ArchaeologicalElement name="Site_Record"/>
+</ValidationSchema>
