@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--@PREPROC:  ./proc/pre.sh-->
+<!--@POSTPROC: ./proc/post.sh-->
 <module>
 
 <Login f="nodata">
@@ -10,7 +11,7 @@
 
 <Control f="nodata">
   <Main>
-    <Add_New_Record t="button" l="Site"/>
+    <Add_New_Site t="button" l="Site"/>
     <autonum/>
     <List_of_Sites e="Site"/>
   </Main>
@@ -19,12 +20,13 @@
 
 <Site>
   <Site_Info>
-    <Site_Name f="id">
+    <Site_Site_Name f="id">
+      Site Name
       <str>
         <pos>1</pos>
         <fmt>SITE-$2</fmt>
       </str>
-    </Site_Name>
+    </Site_Site_Name>
     <gps/>
     <Comments/>
     <Add_New_Record t="button" lc="Site_Record"/>
@@ -33,54 +35,62 @@
 
 <Site_Record>
   <Record>
-    <Site_Name f="id">
-      <str>
-        <pos>3</pos>
-        <fmt>-$2-</fmt>
-      </str>
-    </Site_Name>
-    <Site_Record_ID f="id autonum">
-      <str>
-        <pos>1</pos>
-        <fmt>REC-$2-</fmt>
-      </str>
-    </Site_Record_ID>
-    <author f="id readonly">
-      Recorded by Group
-      <str>
-        <pos>2</pos>
-        <fmt>-$2-</fmt>
-      </str>
-    </author>
-    <Data_recorded_by>
-      <desc>Name of the person recording the data.</desc>
-    </Data_recorded_by>
+    <cols>
+      <Site_Record_Site_Name f="id">
+        Site Name
+        <str>
+          <pos>3</pos>
+          <fmt>$2-</fmt>
+        </str>
+      </Site_Record_Site_Name>
+      <Site_Record_ID f="id autonum">
+        <str>
+          <pos>1</pos>
+          <fmt>REC-$2-</fmt>
+        </str>
+      </Site_Record_ID>
+    </cols>
+    <cols>
+      <author f="id readonly">
+        Recorded by Group
+        <str>
+          <pos>2</pos>
+          <fmt>$2-</fmt>
+        </str>
+      </author>
+      <Data_recorded_by>
+        <desc>Name of the person recording the data.</desc>
+      </Data_recorded_by>
+    </cols>
     <Check_in t="button"/>
-    <Time_checked_in f="id">
+    <Time_Checked_in f="id">
       <str>
         <pos>4</pos>
-        <fmt>-$1</fmt>
+        <fmt>$1</fmt>
       </str>
-    </Time_checked_in>
-    <Check_out/>
+    </Time_Checked_in>
+    <Checkout t="button"/>
     <Time_Checked_out/>
-    <Last_Rainfall t="radio">
+    <Last_Rainfall>
       <desc>
-        1 = Within 24 hours, 2 = 1-3 days, 3 = 4-7 days, 4 = > 7 days, Blank =
-        Unknown
+        1 = Within 24 hours, 2 = 1-3 days, 3 = 4-7 days, 4 = &gt; 7 days,
+        Blank = Unknown
       </desc>
       <opts>
-        <opt>1</opt>
-        <opt>2</opt>
-        <opt>3</opt>
-        <opt>4</opt>
+        <opt>Within 24 hours</opt>
+        <opt>1-3 days</opt>
+        <opt>4-7 days</opt>
+        <opt>&gt; 7 days</opt>
       </opts>
     </Last_Rainfall>
-    <Rainfall_Description t="radio">
+    <Rainfall_Description>
+      <desc>
+        1 = Light, 2 = Medium, 3 = Heavy
+      </desc>
       <opts>
-        <opt>1</opt>
-        <opt>2</opt>
-        <opt>3</opt>
+        <opt>Light</opt>
+        <opt>Medium</opt>
+        <opt>Heavy</opt>
       </opts>
     </Rainfall_Description>
     <Flow_magnitude>
@@ -89,11 +99,11 @@
         Flow
       </desc>
       <opts>
-        <opt>1</opt>
-        <opt>2</opt>
-        <opt>3</opt>
-        <opt>4</opt>
-        <opt>5</opt>
+        <opt>No flow</opt>
+        <opt>Low Flow</opt>
+        <opt>Medium Flow</opt>
+        <opt>High Flow</opt>
+        <opt>Over Bank Flow</opt>
       </opts>
     </Flow_magnitude>
     <Observation>
@@ -201,4 +211,8 @@
   </Parameters>
 </Site_Record>
 
+<logic><![CDATA[
+  <!--@SOURCE: logic/inheritance.bsh-->
+  <!--@SOURCE: logic/check-in-out-button.bsh-->
+]]></logic>
 </module>

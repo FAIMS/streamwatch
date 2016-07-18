@@ -1,0 +1,14 @@
+addOnEvent("Site_Record/Record/Check_in",  "click", "checkIn()");
+addOnEvent("Site_Record/Record/Check_out", "click", "checkOut()");
+
+checkIn() {
+  String ref = "Site_Record/Record/Time_Checked_in";
+  String now = getTimestampNow();
+  setFieldValue(ref, now);
+}
+
+checkOut() {
+  String ref = "Site_Record/Record/Time_Checked_out";
+  String now = getTimestampNow();
+  setFieldValue(ref, now);
+}
