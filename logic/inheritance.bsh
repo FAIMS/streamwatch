@@ -6,6 +6,7 @@ inheritSiteRecordFields() {
   if(parentTabgroup__.equals("Site"))
   copyFieldValue(
       "Site/Site_Info/Site_Site_Name",
-      "Site_Record/Record/Site_Record_Site_Name"
+      "Site_Record/Record/Site_Record_Site_Name",
+      false
   );
 }

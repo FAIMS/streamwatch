@@ -7,7 +7,7 @@
   </RelationshipElement>
   <ArchaeologicalElement name="Site">
     <description/>
-    <property name="Site Name" isIdentifier="true" type="measure">
+    <property name="Site Site Name" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[SITE-$2]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -47,17 +47,17 @@
     </property>
     <property name="Site_Record author" isIdentifier="true" type="measure">
       <description/>
-      <formatString><![CDATA[-$2-]]></formatString>
+      <formatString><![CDATA[$2-]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Site Name" isIdentifier="true" type="measure">
+    <property name="Site Record Site Name" isIdentifier="true" type="measure">
       <description/>
-      <formatString><![CDATA[-$2-]]></formatString>
+      <formatString><![CDATA[$2-]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Time checked in" isIdentifier="true" type="measure">
+    <property name="Time Checked in" isIdentifier="true" type="measure">
       <description/>
-      <formatString><![CDATA[-$1]]></formatString>
+      <formatString><![CDATA[$2]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Data recorded by" type="measure">
@@ -65,44 +65,36 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Check out" type="measure">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
-    <property name="Time Checked out" type="measure">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
     <property name="Last Rainfall" type="vocab">
       <description>
-        1 = Within 24 hours, 2 = 1-3 days, 3 = 4-7 days, 4 = &gt; 7 days, Blank =
-        Unknown
+        1 = Within 24 hours, 2 = 1-3 days, 3 = 4-7 days, 4 = &gt; 7 days,
+        Blank = Unknown
       </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{1}
+        <term>{Within_24_hours}
 <description/></term>
-        <term>{2}
+        <term>{1_3_days}
 <description/></term>
-        <term>{3}
+        <term>{4_7_days}
 <description/></term>
-        <term>{4}
+        <term>{__7_days}
 <description/></term>
       </lookup>
     </property>
     <property name="Rainfall Description" type="vocab">
-      <description/>
+      <description>
+        1 = Light, 2 = Medium, 3 = Heavy
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{1}
+        <term>{Light}
 <description/></term>
-        <term>{2}
+        <term>{Medium}
 <description/></term>
-        <term>{3}
+        <term>{Heavy}
 <description/></term>
       </lookup>
     </property>
@@ -114,15 +106,15 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{1}
+        <term>{No_flow}
 <description/></term>
-        <term>{2}
+        <term>{Low_Flow}
 <description/></term>
-        <term>{3}
+        <term>{Medium_Flow}
 <description/></term>
-        <term>{4}
+        <term>{High_Flow}
 <description/></term>
-        <term>{5}
+        <term>{Over_Bank_Flow}
 <description/></term>
       </lookup>
     </property>
@@ -315,6 +307,11 @@
         regional coordinator on: 02 9320 6422. Pollution incident reporting
         information is available on the website."
       </description>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Time Checked out" type="measure">
+      <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>

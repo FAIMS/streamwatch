@@ -219,6 +219,9 @@ getDropdownItemValue() {
   return dropdownItemValue;
 }
 
+addOnEvent("Site/Site_Info/Existing_Records", "click", "dropdownItemValue = getFieldValue(\"Site/Site_Info/Existing_Records\")");
+addOnEvent("Site_Record/Record/Last_Rainfall", "click", "dropdownItemValue = getFieldValue(\"Site_Record/Record/Last_Rainfall\")");
+addOnEvent("Site_Record/Record/Rainfall_Description", "click", "dropdownItemValue = getFieldValue(\"Site_Record/Record/Rainfall_Description\")");
 addOnEvent("Site_Record/Record/Flow_magnitude", "click", "dropdownItemValue = getFieldValue(\"Site_Record/Record/Flow_magnitude\")");
 
 /******************************************************************************/
@@ -596,8 +599,8 @@ makeVocab(String type, String path, String attrib, List vocabExclusions, String 
       }
     });
 }
-makeVocab("RadioGroup", "Site_Record/Record/Last_Rainfall", "Last Rainfall");
-makeVocab("RadioGroup", "Site_Record/Record/Rainfall_Description", "Rainfall Description");
+makeVocab("DropDown", "Site_Record/Record/Last_Rainfall", "Last Rainfall");
+makeVocab("DropDown", "Site_Record/Record/Rainfall_Description", "Rainfall Description");
 makeVocab("DropDown", "Site_Record/Record/Flow_magnitude", "Flow magnitude");
 makeVocab("RadioGroup", "Site_Record/Parameters/AP_Exception", "AP Exception");
 makeVocab("RadioGroup", "Site_Record/Parameters/DO_Exception", "DO Exception");
@@ -678,6 +681,23 @@ validateFields(List fields, String format) {
   return out;
 }
 
+validateSiteRecord() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Site_Record/Parameters/Available_Phosphate_mg_L", "{Available_Phosphate__mg_L_}"));
+  f.add(fieldPair("Site_Record/Parameters/Dissolved_Oxygen_mh_L", "{Dissolved_Oxygen__mh_L_}"));
+  f.add(fieldPair("Site_Record/Parameters/Ecoli_Petrifilm_CFU_100mL", "{Ecoli___Petrifilm__CFU_100mL_}"));
+  f.add(fieldPair("Site_Record/Parameters/Electrical_Conductivity", "{Electrical_Conductivity}"));
+  f.add(fieldPair("Site_Record/Parameters/Turbidity_NTU", "{Turbidity__NTU_}"));
+  f.add(fieldPair("Site_Record/Parameters/Turbidity_FTU_FAU", "{Turbidity__FTU_FAU_}"));
+  f.add(fieldPair("Site_Record/Parameters/Temperature_C", "{Temperature___C_}"));
+  f.add(fieldPair("Site_Record/Parameters/pH", "{pH}"));
+  f.add(fieldPair("Site_Record/Parameters/Nitrate_mg_L", "{Nitrate__mg_L_}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
 
 
 /******************************************************************************/
@@ -756,6 +776,13 @@ getTimestampNow(String fmt) {
   dateFmt = new java.text.SimpleDateFormat(fmt);
   dateStr = dateFmt.format(date);
 
+  // Insert colon into timezone (e.g. +1000 -> +10:00)
+  String left; String right;
+
+  left    = dateStr.substring(0, dateStr.length() - 2);
+  right   = dateStr.substring(   dateStr.length() - 2);
+  dateStr = left + ":" + right;
+
   return dateStr;
 }
 
@@ -790,7 +817,7 @@ onClickLoginGroupName () {
   // TODO: Add some things which should happen when this element is clicked
   newTab("Control", true);
 }
-onClickControlAddNewRecord () {
+onClickControlAddNewSite () {
   // TODO: Add some things which should happen when this element is clicked
   parentTabgroup__ = "Control";
   newSite();
@@ -808,7 +835,7 @@ onClickSiteAddNewRecord () {
 }
 
 addOnEvent("Login/Group_Login/Group_Name", "click", "onClickLoginGroupName()");
-addOnEvent("Control/Main/Add_New_Record", "click", "onClickControlAddNewRecord()");
+addOnEvent("Control/Main/Add_New_Site", "click", "onClickControlAddNewSite()");
 addOnEvent("Site/Site_Info/Add_New_Record", "click", "onClickSiteAddNewRecord()");
 
 
@@ -825,6 +852,7 @@ removeNavigationButtons() {
 addNavigationButtons(String tabgroup) {
   removeNavigationButtons();
   List tabgroupsToValidate = new ArrayList();
+  tabgroupsToValidate.add("Site_Record");
 
   addNavigationButton("new", new ActionButtonCallback() {
     actionOnLabel() {
@@ -1024,6 +1052,7 @@ newSite(){
   setUuid(tabgroup, null);
   newTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
+  inheritSiteFields();
 }
 
 duplicateSite(){
@@ -1103,6 +1132,7 @@ newSiteRecord(){
   String autoNumDest = "";
   autoNumDest = "Site_Record/Record/Site_Record_ID";
   incAutoNum(autoNumDest);
+  inheritSiteRecordFields();
 }
 
 duplicateSiteRecord(){
@@ -1478,6 +1508,13 @@ menus.add(new String[] {
   "Site",
   ""
 });
+menus.add(new String[] {
+  "DropDown",
+  "Site/Site_Info/Existing_Records",
+  "getUuid(\"Site\")",
+  "Site Record",
+  "Site - Site Record",
+});
 for (m : menus) {
   String viewType       = m[0];
   String path           = m[1];
@@ -1501,6 +1538,40 @@ for (m : menus) {
   addOnEvent(path, "show", functionCall);
 }
 addOnEvent("Control/Main/List_of_Sites", "click", "loadEntity()");
+addOnEvent("Site/Site_Info/Existing_Records", "click", "loadEntity(true)");
+
+/******************************************************************************/
+/*                             HANDWRITTEN LOGIC                              */
+/******************************************************************************/
+
+inheritSiteFields() {
+  return;
+}
+
+inheritSiteRecordFields() {
+  if(parentTabgroup__.equals("Site"))
+  copyFieldValue(
+      "Site/Site_Info/Site_Site_Name",
+      "Site_Record/Record/Site_Record_Site_Name",
+      false
+  );
+}
+addOnEvent("Site_Record/Record/Check_in",      "click", "checkIn()");
+addOnEvent("Site_Record/Parameters/Check_out", "click", "checkOut()");
+
+checkIn() {
+  String ref = "Site_Record/Record/Time_Checked_in";
+  String now = getTimestampNow();
+  setFieldValue(ref, now);
+}
+
+checkOut() {
+  String ref = "Site_Record/Parameters/Time_Checked_out";
+  String now = getTimestampNow();
+  setFieldValue(ref, now);
+
+  validateSiteRecord();
+}
 
 /******************************************************************************/
 /*                                    INIT                                    */
