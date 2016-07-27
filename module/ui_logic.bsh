@@ -725,7 +725,14 @@ saveTabGroup(String tabgroup, String callback) {
   String  parentTabgroup_ = parentTabgroup;
   Boolean userWasSet      = !username.equals("");
 
+  String repopulateEntityList;
+  repopulateEntityList = "populateEntityListsInTabGroup(\"{tabGroup}\")";
+  repopulateEntityList = replaceFirst(repopulateEntityList, "{tabGroup}", parentTabgroup__);
+
+  callback = repopulateEntityList + ";" + callback;
+
   parentTabgroup = null;
+
   SaveCallback saveCallback  = new SaveCallback() {
     onSave(uuid, newRecord) {
       setUuid(tabgroup, uuid);
@@ -741,8 +748,10 @@ saveTabGroup(String tabgroup, String callback) {
           uuid,
           "Parent Of",
           "Child Of",
-          null
+          callback
         );
+      } else {
+        execute(callback);
       }
 
       // This fixes an interesting bug. Without this, if a user was not set
@@ -753,10 +762,9 @@ saveTabGroup(String tabgroup, String callback) {
       // Adding this allows subsequent saves to succeed. Presumably it plays
       // some role in helping FAIMS associate the correct user with a record.
       if (!userWasSet) {
-        saveTabGroup(tabgroup);
+        saveTabGroup(tabgroup, callback);
       }
 
-      execute(callback);
     }
     onError(message) {
       showToast(message);
@@ -1052,6 +1060,7 @@ newSite(){
   setUuid(tabgroup, null);
   newTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
+  populateEntityListsInTabGroup(tabgroup);
   inheritSiteFields();
 }
 
@@ -1129,6 +1138,7 @@ newSiteRecord(){
   setUuid(tabgroup, null);
   newTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
+  populateEntityListsInTabGroup(tabgroup);
   String autoNumDest = "";
   autoNumDest = "Site_Record/Record/Site_Record_ID";
   incAutoNum(autoNumDest);
@@ -1257,7 +1267,13 @@ loadSiteFrom(String uuid) {
   setUuid(tabgroup, uuid);
   if (isNull(uuid)) return;
 
-  showTabGroup(tabgroup, uuid);
+  FetchCallback cb = new FetchCallback() {
+    onFetch(result) {
+      populateEntityListsInTabGroup(tabgroup);
+    }
+  };
+
+  showTabGroup(tabgroup, uuid, cb);
 }
 
 loadSiteRecordFrom(String uuid) {
@@ -1265,7 +1281,13 @@ loadSiteRecordFrom(String uuid) {
   setUuid(tabgroup, uuid);
   if (isNull(uuid)) return;
 
-  showTabGroup(tabgroup, uuid);
+  FetchCallback cb = new FetchCallback() {
+    onFetch(result) {
+      populateEntityListsInTabGroup(tabgroup);
+    }
+  };
+
+  showTabGroup(tabgroup, uuid, cb);
 }
 
 
@@ -1500,27 +1522,38 @@ populateMenuWithEntities (
   }
 }
 
-menus = new ArrayList();
-menus.add(new String[] {
-  "List",
-  "Control/Main/List_of_Sites",
-  "getUuid(\"Control\")",
-  "Site",
-  ""
-});
-menus.add(new String[] {
-  "DropDown",
-  "Site/Site_Info/Existing_Records",
-  "getUuid(\"Site\")",
-  "Site Record",
-  "Site - Site Record",
-});
-for (m : menus) {
-  String viewType       = m[0];
-  String path           = m[1];
-  String parentUuidCall = m[2];
-  String entType        = m[3];
-  String relType        = m[4];
+getTabGroup(String ref) {
+  if (isNull(ref)) {
+    return null;
+  }
+
+  String[] parts = ref.split("/");
+
+  if (parts.length >= 1) return parts[0];
+  else                   return null;
+}
+
+populateEntityListsInTabGroup(String tabGroup) {
+  if (isNull(tabGroup)) {
+    return;
+  }
+
+  for (m : ENTITY_MENUS) {
+    String path         = m[1];
+    String menuTabGroup = getTabGroup(path);
+    String functionCall = getEntityMenuPopulationFunction(m);
+
+    if (menuTabGroup.equals(tabGroup))
+      execute(functionCall);
+  }
+}
+
+getEntityMenuPopulationFunction(String[] menuDescriptor) {
+  String viewType       = menuDescriptor[0];
+  String path           = menuDescriptor[1];
+  String parentUuidCall = menuDescriptor[2];
+  String entType        = menuDescriptor[3];
+  String relType        = menuDescriptor[4];
 
   String functionCall = "";
   functionCall += "populateMenuWithEntities(";
@@ -1535,7 +1568,29 @@ for (m : menus) {
   functionCall += "\"" + relType        + "\"";
   functionCall += ")";
 
-  addOnEvent(path, "show", functionCall);
+  return functionCall;
+}
+
+ENTITY_MENUS = new ArrayList();
+ENTITY_MENUS.add(new String[] {
+  "List",
+  "Control/Main/List_of_Sites",
+  "getUuid(\"Control\")",
+  "Site",
+  ""
+});
+ENTITY_MENUS.add(new String[] {
+  "DropDown",
+  "Site/Site_Info/Existing_Records",
+  "getUuid(\"Site\")",
+  "Site Record",
+  "Site - Site Record",
+});
+for (m : ENTITY_MENUS) {
+  String path         = m[1];
+  String functionCall = getEntityMenuPopulationFunction(m);
+
+  execute(functionCall);
 }
 addOnEvent("Control/Main/List_of_Sites", "click", "loadEntity()");
 addOnEvent("Site/Site_Info/Existing_Records", "click", "loadEntity(true)");

@@ -323,7 +323,7 @@
           <group ref="Col_2" faims_style="even">
             <label/>
             <input ref="Accuracy" faims_attribute_name="Accuracy" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
-              <label>{Accuracy}</label>
+              <label>{Accuracy__m_}</label>
             </input>
           </group>
         </group>
