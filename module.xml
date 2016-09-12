@@ -5,6 +5,10 @@
 
 <Login f="nodata">
   <Group_Login>
+    <Webview t="webview">
+      The user account which was used to create this module cannot be used to
+      log in.
+    </Webview>
     <Group_Name t="dropdown" f="user"/>
     <Login  t="button"/>
     <Signup t="button"/>

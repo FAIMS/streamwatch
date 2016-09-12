@@ -18,6 +18,7 @@
           </style>
           <Login>
             <Group_Login>
+              <Webview/>
               <Group_Name/>
               <Login/>
               <Signup/>
@@ -226,6 +227,9 @@
       <label>{Login}</label>
       <group ref="Group_Login">
         <label>{Group_Login}</label>
+        <input faims_web="true" ref="Webview">
+          <label>{The_user_account_which_was_used_to_create_this_module_cannot_be_used_to_log_in_}</label>
+        </input>
         <select1 ref="Group_Name">
           <label>{Group_Name}</label>
           <item>
