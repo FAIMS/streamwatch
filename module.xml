@@ -4,8 +4,10 @@
 <module suppressWarnings="true">
 
 <Login f="nodata">
-  <Group_Login f="noscroll">
-    <Group_Name t="list" f="user" l="Control"/>
+  <Group_Login>
+    <Group_Name t="dropdown" f="user"/>
+    <Login  t="button"/>
+    <Signup t="button"/>
   </Group_Login>
 </Login>
 
@@ -215,5 +217,6 @@
 <logic><![CDATA[
   <!--@SOURCE: logic/inheritance.bsh-->
   <!--@SOURCE: logic/check-in-out-button.bsh-->
+  <!--@SOURCE: logic/login.bsh-->
 ]]></logic>
 </module>
