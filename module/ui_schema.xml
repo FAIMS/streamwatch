@@ -19,6 +19,8 @@
           <Login>
             <Group_Login>
               <Group_Name/>
+              <Login/>
+              <Signup/>
             </Group_Login>
           </Login>
           <Control>
@@ -222,15 +224,21 @@
     </group>
     <group ref="Login">
       <label>{Login}</label>
-      <group ref="Group_Login" faims_scrollable="false">
+      <group ref="Group_Login">
         <label>{Group_Login}</label>
-        <select1 appearance="compact" ref="Group_Name">
+        <select1 ref="Group_Name">
           <label>{Group_Name}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
+        <trigger ref="Login">
+          <label>{Login}</label>
+        </trigger>
+        <trigger ref="Signup">
+          <label>{Signup}</label>
+        </trigger>
       </group>
     </group>
     <group ref="Control">
