@@ -19,8 +19,8 @@
           <Login>
             <Group_Login>
               <Group_Name/>
-              <Login/>
-              <Signup/>
+              <Log_in/>
+              <Sign_up/>
             </Group_Login>
           </Login>
           <Control>
@@ -233,11 +233,11 @@
             <value>0</value>
           </item>
         </select1>
-        <trigger ref="Login">
-          <label>{Login}</label>
+        <trigger ref="Log_in">
+          <label>{Log_in}</label>
         </trigger>
-        <trigger ref="Signup">
-          <label>{Signup}</label>
+        <trigger ref="Sign_up">
+          <label>{Sign_up}</label>
         </trigger>
       </group>
     </group>

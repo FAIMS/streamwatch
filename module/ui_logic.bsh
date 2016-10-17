@@ -121,7 +121,7 @@ void persistOverSessions(String ref) {
   insertIntoLocalSettingsOnChange     (ref);
 }
 
-/**************************** FIELD COPYING HELPER ****************************/
+/*************************** FIELD COPYING HELPERS ****************************/
 /* Provides an easy way to copy field values, even between vocabs.            */
 /******************************************************************************/
 void copyFieldValue(String src, String dst) {
@@ -177,6 +177,19 @@ void copyFieldValue(String src, String dst, Boolean doFindVocabId) {
   };
 
   fetchOne(q, populate);
+}
+
+void inheritFieldValue(String src, String dst, boolean doFindVocabId) {
+  String fun = "";
+  fun = "copyFieldValue(\"{src}\", \"{dst}\", false)";
+  fun = replaceFirst(fun, "{src}", src);
+  fun = replaceFirst(fun, "{dst}", dst);
+
+  addOnEvent(getTabGroupRef(dst), "create", fun);
+}
+
+void inheritFieldValue(String src, String dst) {
+  inheritFieldValue(src, dst, false);
 }
 
 newTab(String tab, Boolean resolveTabGroups) {
@@ -1323,7 +1336,7 @@ void makeDuplicateRelationships(fetchedAttributes, String newUuid){
     String parentUuid             = savedAttribute.get(3);
     String childArchEntType       = savedAttribute.get(5);
 
-    String onSaveRel              = "onSave" + childArchEntType + "__()";
+    String onSaveRel              = "onSave" + childArchEntType.replaceAll(" ", "") + "__()";
 
     saveEntitiesToHierRel(
         relntypename,
@@ -1446,11 +1459,13 @@ void onDeleteSite__(){
 void duplicateSite(){
   String tabgroup = "Site";
   String uuidOld = getUuid(tabgroup);
+  setUuid(tabgroup, "");
 
   disableAutoSave(tabgroup);
 
   clearGpsInTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
+  populateEntityListsInTabGroup(tabgroup);
 
   onCopySite__();
 
@@ -1479,7 +1494,7 @@ void duplicateSite(){
   };
 
   String extraDupeAttributes = "";
-  fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
+  fetchAll(getDuplicateAttributeQuery(uuidOld, extraDupeAttributes), new FetchCallback(){
     onFetch(result) {
       excludeAttributes = new ArrayList();
 
@@ -1576,6 +1591,7 @@ void onDeleteSiteRecord__(){
 void duplicateSiteRecord(){
   String tabgroup = "Site_Record";
   String uuidOld = getUuid(tabgroup);
+  setUuid(tabgroup, "");
 
   disableAutoSave(tabgroup);
   String autoNumDest = "";
@@ -1584,6 +1600,7 @@ void duplicateSiteRecord(){
 
   clearGpsInTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
+  populateEntityListsInTabGroup(tabgroup);
 
   onCopySiteRecord__();
 
@@ -1612,7 +1629,7 @@ void duplicateSiteRecord(){
   };
 
   String extraDupeAttributes = "";
-  fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
+  fetchAll(getDuplicateAttributeQuery(uuidOld, extraDupeAttributes), new FetchCallback(){
     onFetch(result) {
       excludeAttributes = new ArrayList();
 
@@ -1981,6 +1998,9 @@ void populateEntityListsInTabGroup(String tabGroup) {
   }
 }
 
+/* Populates each list containing records whose archent type is the same as that
+ * of `tabGroup`.
+ */
 void populateEntityListsOfArchEnt(String tabGroup) {
   if (isNull(tabGroup)) {
     return;
@@ -2114,8 +2134,8 @@ doUserLogin () {
   newTab("Control", true);
 }
 
-addOnEvent("Login/Group_Login/Login",  "click", "onClickLogin()");
-addOnEvent("Login/Group_Login/Signup", "click", "onClickSignup()");
+addOnEvent("Login/Group_Login/Log_in",  "click", "onClickLogin()");
+addOnEvent("Login/Group_Login/Sign_up", "click", "onClickSignup()");
 
 /******************************************************************************/
 /*                                    INIT                                    */

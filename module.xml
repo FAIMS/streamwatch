@@ -6,8 +6,8 @@
 <Login f="nodata">
   <Group_Login>
     <Group_Name t="dropdown" f="user"/>
-    <Login  t="button"/>
-    <Signup t="button"/>
+    <Log_in  t="button"/>
+    <Sign_up t="button"/>
   </Group_Login>
 </Login>
 

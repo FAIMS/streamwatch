@@ -36,5 +36,5 @@ doUserLogin () {
   newTab("Control", true);
 }
 
-addOnEvent("Login/Group_Login/Login",  "click", "onClickLogin()");
-addOnEvent("Login/Group_Login/Signup", "click", "onClickSignup()");
+addOnEvent("Login/Group_Login/Log_in",  "click", "onClickLogin()");
+addOnEvent("Login/Group_Login/Sign_up", "click", "onClickSignup()");
