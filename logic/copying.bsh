@@ -1,0 +1,15 @@
+/********************************** COPYING ***********************************/
+clearTimeCheckedIn() {
+  String ref = "Site_Record/Record/Time_Checked_in";
+  String val = "";
+  setFieldValue(ref, val);
+}
+
+clearTimeCheckedOut() {
+  String ref = "Site_Record/Parameters/Time_Checked_out";
+  String val = "";
+  setFieldValue(ref, val);
+}
+
+addOnEvent("Site_Record", "copy", "clearTimeCheckedIn()");
+addOnEvent("Site_Record", "copy", "clearTimeCheckedOut()");

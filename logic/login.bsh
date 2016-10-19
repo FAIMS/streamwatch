@@ -29,7 +29,17 @@ onClickLogin () {
 }
 
 onClickSignup () {
-  showCreateUserDialog("populateListForUsers()");
+  setSyncEnabled(true);
+  showCreateUserDialog("signupSuccessful()");
+}
+
+signupSuccessful() {
+  //String head  = "Signup Successful";
+  //String body  = "You have successfuly signed up. You may now log in as the ";
+         //body += "newly created user.";
+
+  //showWarning(head, body);
+  populateListForUsers();
 }
 
 doUserLogin () {

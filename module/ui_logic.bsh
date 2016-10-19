@@ -1944,7 +1944,7 @@ void populateMenuWithEntities (
     " WHERE relationshipid IN (SELECT relationshipid  " +
     "                            FROM latestnondeletedrelationship JOIN relntype USING (relntypeid) " +
     "                           WHERE relntypename = '"+relType+"') " +
-    "   AND parentuuid = " + parentUuid + " " +
+    "   AND parentuuid = '" + parentUuid + "' " +
     "   AND (childaenttypename = '"+entType+"' OR '"+entType+"' = '') " +
     " ORDER BY createdat DESC ";
 
@@ -2127,7 +2127,17 @@ onClickLogin () {
 }
 
 onClickSignup () {
-  showCreateUserDialog("populateListForUsers()");
+  setSyncEnabled(true);
+  showCreateUserDialog("signupSuccessful()");
+}
+
+signupSuccessful() {
+  //String head  = "Signup Successful";
+  //String body  = "You have successfuly signed up. You may now log in as the ";
+         //body += "newly created user.";
+
+  //showWarning(head, body);
+  populateListForUsers();
 }
 
 doUserLogin () {
@@ -2136,6 +2146,21 @@ doUserLogin () {
 
 addOnEvent("Login/Group_Login/Log_in",  "click", "onClickLogin()");
 addOnEvent("Login/Group_Login/Sign_up", "click", "onClickSignup()");
+/********************************** COPYING ***********************************/
+clearTimeCheckedIn() {
+  String ref = "Site_Record/Record/Time_Checked_in";
+  String val = "";
+  setFieldValue(ref, val);
+}
+
+clearTimeCheckedOut() {
+  String ref = "Site_Record/Parameters/Time_Checked_out";
+  String val = "";
+  setFieldValue(ref, val);
+}
+
+addOnEvent("Site_Record", "copy", "clearTimeCheckedIn()");
+addOnEvent("Site_Record", "copy", "clearTimeCheckedOut()");
 
 /******************************************************************************/
 /*                                    INIT                                    */

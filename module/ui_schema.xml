@@ -243,7 +243,7 @@
     </group>
     <group ref="Control">
       <label>{Control}</label>
-      <group ref="Main">
+      <group ref="Main" faims_scrollable="false">
         <label>{Main}</label>
         <trigger ref="Add_New_Site">
           <label>{Add_New_Site}</label>

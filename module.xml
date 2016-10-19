@@ -12,10 +12,10 @@
 </Login>
 
 <Control f="nodata">
-  <Main>
+  <Main f="noscroll">
     <Add_New_Site t="button" l="Site"/>
     <autonum/>
-    <List_of_Sites e="Site"/>
+    <List_of_Sites t="list" e="Site"/>
   </Main>
   <search/>
 </Control>
@@ -218,5 +218,6 @@
   <!--@SOURCE: logic/inheritance.bsh-->
   <!--@SOURCE: logic/check-in-out-button.bsh-->
   <!--@SOURCE: logic/login.bsh-->
+  <!--@SOURCE: logic/copying.bsh-->
 ]]></logic>
 </module>
