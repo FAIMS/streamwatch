@@ -17,7 +17,7 @@
 
 <path d="M 5 30 L 5 35 L 95 35 L 95 30" stroke="black" fill="white" stroke-width="1"/>
 
-<text x="5" y="12" font-family="Roboto" font-size="10pt" fill="black"> Electrical Conductivity (μs/cm) </text>
+<text x="5" y="12" font-family="Roboto" font-size="10pt" fill="black"> Recorded by Group </text>
 stroke black
 fill black
 stroke-width 0

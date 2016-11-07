@@ -16,7 +16,7 @@
         fill="white" stroke-width="0"/>
 
 <path d="M 5 5 L 95 5 L 95 35 L 5 35 Z" fill="lightgray"/>
-<text x="50" y="24" font-family="Roboto" font-size="9" fill="black" text-anchor="middle"> Search </text>
+<text x="50" y="24" font-family="Roboto" font-size="14" fill="black" text-anchor="middle"> Search Button </text>
 
 fill lightgray
 stroke lightgray
@@ -36,6 +36,6 @@ stroke-opacity 0
 
 font-size 20
 gravity center
-text 0,0 "Search"
+text 0,0 "Search Button"
 
 </svg>
