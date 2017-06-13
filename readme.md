@@ -3,7 +3,7 @@ This module was created for the **Streamwatch project**, based at the Australian
 The module is part of the **Research Attraction and Acceleration Program (RAAP)** aimed to support innovation and investment in the New South Wales in 2016 and 2017.
 
 ### Date of release & version:
-June 2017, FAIMS v2.5, Android 6+ 
+June 2017, FAIMS v2.5, compatible with Android 6.x+ 
 
 ### Access:
 Accessible as part of the **FAIMS Demo library** at our Demo server.
