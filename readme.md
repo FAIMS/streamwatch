@@ -17,7 +17,7 @@ Accessible as part of the **FAIMS Demo library** at our Demo server.
 
 # This module can be used with no or minor modification for:
 * longitudinal monitoring of sites (initial visit followed by revisits)
-* simple monitoring of water quality (Phoshate, Oxygen, Ecoli, Ph measuring ...)
+* simple monitoring of water quality (Phosphate, Oxygen, Ecoli, Ph measuring ...)
 
 # Contact info:
 For more details about the **Streamwatch project** please visit https://www.streamwatch.org.au/. If you have any questions about the Streamwatch project, contact streamwatch@austmus.gov.au
