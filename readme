@@ -1,0 +1,19 @@
+About:
+This module was created for the Streamwatch project, based at the Australian Museum in Sydney, Australia.
+It is a community science module for monitoring water quality in streams and lakes in Sydney and its immediate vicinity.
+
+This module contains the following FAIMS features:
+*user sign-up
+*validated fields with user observations
+*controlled vocabulary
+*auto-retrieved GPS coordinates
+*auto-retrieved current timestamp
+
+This module can be used with no or minor modification for:
+*longitudinal monitoring of sites (initial visit followed by revisits)
+*simple monitoring of water quality (Phoshate, Oxygen, Ecoli, Ph measuring ...)
+
+Contact info:
+For more details about the Streamwatch project please visit https://www.streamwatch.org.au/ 
+If you have any questions about the module, please contact Petra from the FAIMS team (petra@fedarch.org)
+If you have any questions about the Streamwatch project, contact streamwatch@austmus.gov.au
