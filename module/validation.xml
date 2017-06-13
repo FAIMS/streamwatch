@@ -1,50 +1,49 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='utf-8'?>
 <ValidationSchema>
-  <ArchaeologicalElement name="Site"/>
-  <ArchaeologicalElement name="Site_Record">
+  <ArchaeologicalElement name="Site Record">
     <property name="Available Phosphate mg L">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
       </validator>
     </property>
     <property name="Dissolved Oxygen mh L">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
       </validator>
     </property>
     <property name="Ecoli Petrifilm CFU 100mL">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
       </validator>
     </property>
     <property name="Electrical Conductivity">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
       </validator>
     </property>
     <property name="Turbidity NTU">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
       </validator>
     </property>
     <property name="Turbidity FTU FAU">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
       </validator>
     </property>
     <property name="Temperature C">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
       </validator>
     </property>
     <property name="pH">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
       </validator>
     </property>
     <property name="Nitrate mg L">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
       </validator>
     </property>
   </ArchaeologicalElement>

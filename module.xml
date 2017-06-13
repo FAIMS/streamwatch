@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--@PREPROC:  ./proc/pre.sh-->
-<!--@POSTPROC: ./proc/post.sh-->
 <module suppressWarnings="true">
 
 <Login f="nodata">
   <Group_Login>
     <Group_Name t="dropdown" f="user"/>
-    <Log_in  t="button"/>
-    <Sign_up t="button"/>
+    <Log_in  t="button" ll="Control"/>
+    <Sign_up t="button"  l="signup"/>
   </Group_Login>
 </Login>
 
@@ -39,7 +37,7 @@
 <Site_Record>
   <Record>
     <cols>
-      <Site_Record_Site_Name f="id">
+      <Site_Record_Site_Name f="id" i="Site/Site_Info/Site_Site_Name">
         Site Name
         <str>
           <pos>3</pos>
@@ -215,9 +213,7 @@
 </Site_Record>
 
 <logic><![CDATA[
-  <!--@SOURCE: logic/inheritance.bsh-->
   <!--@SOURCE: logic/check-in-out-button.bsh-->
-  <!--@SOURCE: logic/login.bsh-->
   <!--@SOURCE: logic/copying.bsh-->
 ]]></logic>
 </module>

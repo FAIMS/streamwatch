@@ -1,14 +1,10 @@
 /********************************** COPYING ***********************************/
 clearTimeCheckedIn() {
-  String ref = "Site_Record/Record/Time_Checked_in";
-  String val = "";
-  setFieldValue(ref, val);
+  clearField("Site_Record/Record/Time_Checked_in");
 }
 
 clearTimeCheckedOut() {
-  String ref = "Site_Record/Parameters/Time_Checked_out";
-  String val = "";
-  setFieldValue(ref, val);
+  clearField("Site_Record/Parameters/Time_Checked_out");
 }
 
 addOnEvent("Site_Record", "copy", "clearTimeCheckedIn()");
