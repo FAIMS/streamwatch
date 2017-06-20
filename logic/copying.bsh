@@ -1,11 +1,11 @@
 /********************************** COPYING ***********************************/
 clearTimeCheckedIn() {
-  clearField("Site_Record/Record/Time_Checked_in");
+  clearField("Site_Visit/Record/Time_Checked_in");
 }
 
 clearTimeCheckedOut() {
-  clearField("Site_Record/Parameters/Time_Checked_out");
+  clearField("Site_Visit/Parameters/Time_Checked_out");
 }
 
-addOnEvent("Site_Record", "copy", "clearTimeCheckedIn()");
-addOnEvent("Site_Record", "copy", "clearTimeCheckedOut()");
+addOnEvent("Site_Visit", "copy", "clearTimeCheckedIn()");
+addOnEvent("Site_Visit", "copy", "clearTimeCheckedOut()");

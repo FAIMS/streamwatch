@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <dataSchema>
-  <RelationshipElement name="Site - Site Record" type="hierarchical">
+  <RelationshipElement name="Site - Site Visit" type="hierarchical">
     <description>A 1-to-n relationship between the parent and its children, respectively.</description>
     <parent>Parent Of</parent>
     <child>Child Of</child>
@@ -43,19 +43,19 @@
       <appendCharacterString> - </appendCharacterString>
     </property>
   </ArchaeologicalElement>
-  <ArchaeologicalElement name="Site Record">
+  <ArchaeologicalElement name="Site Visit">
     <description></description>
-    <property name="Site Record ID" type="measure" isIdentifier="true">
+    <property name="Site Visit ID" type="measure" isIdentifier="true">
       <description></description>
       <formatString>REC-$2-</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Site Record author" type="measure" isIdentifier="true">
+    <property name="Site Visit author" type="measure" isIdentifier="true">
       <description></description>
       <formatString>$2-</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Site Record Site Name" type="measure" isIdentifier="true">
+    <property name="Site Visit Site Name" type="measure" isIdentifier="true">
       <description></description>
       <formatString>$2-</formatString>
       <appendCharacterString> - </appendCharacterString>

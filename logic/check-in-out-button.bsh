@@ -1,14 +1,14 @@
-addOnEvent("Site_Record/Record/Check_in",      "click", "checkIn()");
-addOnEvent("Site_Record/Parameters/Check_out", "click", "checkOut()");
+addOnEvent("Site_Visit/Record/Check_in",      "click", "checkIn()");
+addOnEvent("Site_Visit/Parameters/Check_out", "click", "checkOut()");
 
 checkIn() {
-  String ref = "Site_Record/Record/Time_Checked_in";
+  String ref = "Site_Visit/Record/Time_Checked_in";
   String now = getTimestampNow();
   setFieldValue(ref, now);
 }
 
 checkOut() {
-  String ref = "Site_Record/Parameters/Time_Checked_out";
+  String ref = "Site_Visit/Parameters/Time_Checked_out";
   String now = getTimestampNow();
   setFieldValue(ref, now);
 

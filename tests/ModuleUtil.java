@@ -35,10 +35,10 @@ public class ModuleUtil extends ModuleHelper {
 
     /*
         Type: tab group
-        Ref:  Site_Record
+        Ref:  Site_Visit
      */
-    public static View get_SiteRecord(Solo solo) {
-        String ref = "Site_Record";
+    public static View get_SiteVisit(Solo solo) {
+        String ref = "Site_Visit";
         return (android.view.View) solo.getView((Object) ref);
     }
     /*
@@ -70,19 +70,19 @@ public class ModuleUtil extends ModuleHelper {
 
     /*
         Type: tab
-        Ref:  Site_Record/Parameters
+        Ref:  Site_Visit/Parameters
      */
-    public static View get_SiteRecord_Parameters(Solo solo) {
-        String ref = "Site_Record/Parameters";
+    public static View get_SiteVisit_Parameters(Solo solo) {
+        String ref = "Site_Visit/Parameters";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: tab
-        Ref:  Site_Record/Record
+        Ref:  Site_Visit/Record
      */
-    public static View get_SiteRecord_Record(Solo solo) {
-        String ref = "Site_Record/Record";
+    public static View get_SiteVisit_Record(Solo solo) {
+        String ref = "Site_Visit/Record";
         return (android.view.View) solo.getView((Object) ref);
     }
     /*
@@ -123,10 +123,10 @@ public class ModuleUtil extends ModuleHelper {
 
     /*
         Type: button
-        Ref:  Site/Site_Info/Add_New_Record
+        Ref:  Site/Site_Info/Add_New_Visit
      */
-    public static View get_Site_SiteInfo_AddNewRecord(Solo solo) {
-        String ref = "Site/Site_Info/Add_New_Record";
+    public static View get_Site_SiteInfo_AddNewVisit(Solo solo) {
+        String ref = "Site/Site_Info/Add_New_Visit";
         return (android.view.View) solo.getView((Object) ref);
     }
 
@@ -141,19 +141,19 @@ public class ModuleUtil extends ModuleHelper {
 
     /*
         Type: button
-        Ref:  Site_Record/Parameters/Check_out
+        Ref:  Site_Visit/Parameters/Check_out
      */
-    public static View get_SiteRecord_Parameters_Checkout(Solo solo) {
-        String ref = "Site_Record/Parameters/Check_out";
+    public static View get_SiteVisit_Parameters_Checkout(Solo solo) {
+        String ref = "Site_Visit/Parameters/Check_out";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: button
-        Ref:  Site_Record/Record/Check_in
+        Ref:  Site_Visit/Record/Check_in
      */
-    public static View get_SiteRecord_Record_Checkin(Solo solo) {
-        String ref = "Site_Record/Record/Check_in";
+    public static View get_SiteVisit_Record_Checkin(Solo solo) {
+        String ref = "Site_Visit/Record/Check_in";
         return (android.view.View) solo.getView((Object) ref);
     }
 
@@ -177,46 +177,37 @@ public class ModuleUtil extends ModuleHelper {
 
     /*
         Type: dropdown
-        Ref:  Site/Site_Info/Existing_Records
+        Ref:  Site_Visit/Record/Flow_magnitude
      */
-    public static View get_Site_SiteInfo_ExistingRecords(Solo solo) {
-        String ref = "Site/Site_Info/Existing_Records";
+    public static View get_SiteVisit_Record_Flowmagnitude(Solo solo) {
+        String ref = "Site_Visit/Record/Flow_magnitude";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: dropdown
-        Ref:  Site_Record/Record/Flow_magnitude
+        Ref:  Site_Visit/Record/Last_Rainfall
      */
-    public static View get_SiteRecord_Record_Flowmagnitude(Solo solo) {
-        String ref = "Site_Record/Record/Flow_magnitude";
+    public static View get_SiteVisit_Record_LastRainfall(Solo solo) {
+        String ref = "Site_Visit/Record/Last_Rainfall";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: dropdown
-        Ref:  Site_Record/Record/Last_Rainfall
+        Ref:  Site_Visit/Record/Rainfall_Description
      */
-    public static View get_SiteRecord_Record_LastRainfall(Solo solo) {
-        String ref = "Site_Record/Record/Last_Rainfall";
-        return (android.view.View) solo.getView((Object) ref);
-    }
-
-    /*
-        Type: dropdown
-        Ref:  Site_Record/Record/Rainfall_Description
-     */
-    public static View get_SiteRecord_Record_RainfallDescription(Solo solo) {
-        String ref = "Site_Record/Record/Rainfall_Description";
+    public static View get_SiteVisit_Record_RainfallDescription(Solo solo) {
+        String ref = "Site_Visit/Record/Rainfall_Description";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Control/Main/Next_Site_Record_ID
+        Ref:  Control/Main/Next_Site_Visit_ID
      */
-    public static EditText get_Control_Main_NextSiteRecordID(Solo solo) {
-        String ref = "Control/Main/Next_Site_Record_ID";
+    public static EditText get_Control_Main_NextSiteVisitID(Solo solo) {
+        String ref = "Control/Main/Next_Site_Visit_ID";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
@@ -294,163 +285,163 @@ public class ModuleUtil extends ModuleHelper {
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Available_Phosphate_mg_L
+        Ref:  Site_Visit/Parameters/Available_Phosphate_mg_L
      */
-    public static EditText get_SiteRecord_Parameters_AvailablePhosphatemgL(Solo solo) {
-        String ref = "Site_Record/Parameters/Available_Phosphate_mg_L";
+    public static EditText get_SiteVisit_Parameters_AvailablePhosphatemgL(Solo solo) {
+        String ref = "Site_Visit/Parameters/Available_Phosphate_mg_L";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Comments
+        Ref:  Site_Visit/Parameters/Comments
      */
-    public static EditText get_SiteRecord_Parameters_Comments(Solo solo) {
-        String ref = "Site_Record/Parameters/Comments";
+    public static EditText get_SiteVisit_Parameters_Comments(Solo solo) {
+        String ref = "Site_Visit/Parameters/Comments";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Dissolved_Oxygen_mh_L
+        Ref:  Site_Visit/Parameters/Dissolved_Oxygen_mh_L
      */
-    public static EditText get_SiteRecord_Parameters_DissolvedOxygenmhL(Solo solo) {
-        String ref = "Site_Record/Parameters/Dissolved_Oxygen_mh_L";
+    public static EditText get_SiteVisit_Parameters_DissolvedOxygenmhL(Solo solo) {
+        String ref = "Site_Visit/Parameters/Dissolved_Oxygen_mh_L";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Ecoli_Petrifilm_CFU_100mL
+        Ref:  Site_Visit/Parameters/Ecoli_Petrifilm_CFU_100mL
      */
-    public static EditText get_SiteRecord_Parameters_EcoliPetrifilmCFU100mL(Solo solo) {
-        String ref = "Site_Record/Parameters/Ecoli_Petrifilm_CFU_100mL";
+    public static EditText get_SiteVisit_Parameters_EcoliPetrifilmCFU100mL(Solo solo) {
+        String ref = "Site_Visit/Parameters/Ecoli_Petrifilm_CFU_100mL";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Electrical_Conductivity
+        Ref:  Site_Visit/Parameters/Electrical_Conductivity
      */
-    public static EditText get_SiteRecord_Parameters_ElectricalConductivity(Solo solo) {
-        String ref = "Site_Record/Parameters/Electrical_Conductivity";
+    public static EditText get_SiteVisit_Parameters_ElectricalConductivity(Solo solo) {
+        String ref = "Site_Visit/Parameters/Electrical_Conductivity";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Nitrate_mg_L
+        Ref:  Site_Visit/Parameters/Nitrate_mg_L
      */
-    public static EditText get_SiteRecord_Parameters_NitratemgL(Solo solo) {
-        String ref = "Site_Record/Parameters/Nitrate_mg_L";
+    public static EditText get_SiteVisit_Parameters_NitratemgL(Solo solo) {
+        String ref = "Site_Visit/Parameters/Nitrate_mg_L";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Other_Test_Name
+        Ref:  Site_Visit/Parameters/Other_Test_Name
      */
-    public static EditText get_SiteRecord_Parameters_OtherTestName(Solo solo) {
-        String ref = "Site_Record/Parameters/Other_Test_Name";
+    public static EditText get_SiteVisit_Parameters_OtherTestName(Solo solo) {
+        String ref = "Site_Visit/Parameters/Other_Test_Name";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Other_Test_Values
+        Ref:  Site_Visit/Parameters/Other_Test_Values
      */
-    public static EditText get_SiteRecord_Parameters_OtherTestValues(Solo solo) {
-        String ref = "Site_Record/Parameters/Other_Test_Values";
+    public static EditText get_SiteVisit_Parameters_OtherTestValues(Solo solo) {
+        String ref = "Site_Visit/Parameters/Other_Test_Values";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Temperature_C
+        Ref:  Site_Visit/Parameters/Temperature_C
      */
-    public static EditText get_SiteRecord_Parameters_TemperatureC(Solo solo) {
-        String ref = "Site_Record/Parameters/Temperature_C";
+    public static EditText get_SiteVisit_Parameters_TemperatureC(Solo solo) {
+        String ref = "Site_Visit/Parameters/Temperature_C";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Time_Checked_out
+        Ref:  Site_Visit/Parameters/Time_Checked_out
      */
-    public static EditText get_SiteRecord_Parameters_TimeCheckedout(Solo solo) {
-        String ref = "Site_Record/Parameters/Time_Checked_out";
+    public static EditText get_SiteVisit_Parameters_TimeCheckedout(Solo solo) {
+        String ref = "Site_Visit/Parameters/Time_Checked_out";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Turbidity_FTU_FAU
+        Ref:  Site_Visit/Parameters/Turbidity_FTU_FAU
      */
-    public static EditText get_SiteRecord_Parameters_TurbidityFTUFAU(Solo solo) {
-        String ref = "Site_Record/Parameters/Turbidity_FTU_FAU";
+    public static EditText get_SiteVisit_Parameters_TurbidityFTUFAU(Solo solo) {
+        String ref = "Site_Visit/Parameters/Turbidity_FTU_FAU";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/Turbidity_NTU
+        Ref:  Site_Visit/Parameters/Turbidity_NTU
      */
-    public static EditText get_SiteRecord_Parameters_TurbidityNTU(Solo solo) {
-        String ref = "Site_Record/Parameters/Turbidity_NTU";
+    public static EditText get_SiteVisit_Parameters_TurbidityNTU(Solo solo) {
+        String ref = "Site_Visit/Parameters/Turbidity_NTU";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Parameters/pH
+        Ref:  Site_Visit/Parameters/pH
      */
-    public static EditText get_SiteRecord_Parameters_pH(Solo solo) {
-        String ref = "Site_Record/Parameters/pH";
+    public static EditText get_SiteVisit_Parameters_pH(Solo solo) {
+        String ref = "Site_Visit/Parameters/pH";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Record/Data_recorded_by
+        Ref:  Site_Visit/Record/Data_recorded_by
      */
-    public static EditText get_SiteRecord_Record_Datarecordedby(Solo solo) {
-        String ref = "Site_Record/Record/Data_recorded_by";
+    public static EditText get_SiteVisit_Record_Datarecordedby(Solo solo) {
+        String ref = "Site_Visit/Record/Data_recorded_by";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Record/Observation
+        Ref:  Site_Visit/Record/Observation
      */
-    public static EditText get_SiteRecord_Record_Observation(Solo solo) {
-        String ref = "Site_Record/Record/Observation";
+    public static EditText get_SiteVisit_Record_Observation(Solo solo) {
+        String ref = "Site_Visit/Record/Observation";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Record/Site_Record_ID
+        Ref:  Site_Visit/Record/Site_Visit_ID
      */
-    public static EditText get_SiteRecord_Record_SiteRecordID(Solo solo) {
-        String ref = "Site_Record/Record/Site_Record_ID";
+    public static EditText get_SiteVisit_Record_SiteVisitID(Solo solo) {
+        String ref = "Site_Visit/Record/Site_Visit_ID";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Record/Site_Record_Site_Name
+        Ref:  Site_Visit/Record/Site_Visit_Site_Name
      */
-    public static EditText get_SiteRecord_Record_SiteRecordSiteName(Solo solo) {
-        String ref = "Site_Record/Record/Site_Record_Site_Name";
+    public static EditText get_SiteVisit_Record_SiteVisitSiteName(Solo solo) {
+        String ref = "Site_Visit/Record/Site_Visit_Site_Name";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
     /*
         Type: input
-        Ref:  Site_Record/Record/Time_Checked_in
+        Ref:  Site_Visit/Record/Time_Checked_in
      */
-    public static EditText get_SiteRecord_Record_TimeCheckedin(Solo solo) {
-        String ref = "Site_Record/Record/Time_Checked_in";
+    public static EditText get_SiteVisit_Record_TimeCheckedin(Solo solo) {
+        String ref = "Site_Visit/Record/Time_Checked_in";
         return (android.widget.EditText) solo.getView((Object) ref);
     }
 
@@ -473,101 +464,110 @@ public class ModuleUtil extends ModuleHelper {
     }
 
     /*
-        Type: radio
-        Ref:  Site_Record/Parameters/AP_Exception
+        Type: list
+        Ref:  Site/Site_Info/Existing_Site_Visits
      */
-    public static View get_SiteRecord_Parameters_APException(Solo solo) {
-        String ref = "Site_Record/Parameters/AP_Exception";
+    public static View get_Site_SiteInfo_ExistingSiteVisits(Solo solo) {
+        String ref = "Site/Site_Info/Existing_Site_Visits";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: radio
-        Ref:  Site_Record/Parameters/DO_Exception
+        Ref:  Site_Visit/Parameters/AP_Exception
      */
-    public static View get_SiteRecord_Parameters_DOException(Solo solo) {
-        String ref = "Site_Record/Parameters/DO_Exception";
+    public static View get_SiteVisit_Parameters_APException(Solo solo) {
+        String ref = "Site_Visit/Parameters/AP_Exception";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: radio
-        Ref:  Site_Record/Parameters/EC_Exception
+        Ref:  Site_Visit/Parameters/DO_Exception
      */
-    public static View get_SiteRecord_Parameters_ECException(Solo solo) {
-        String ref = "Site_Record/Parameters/EC_Exception";
+    public static View get_SiteVisit_Parameters_DOException(Solo solo) {
+        String ref = "Site_Visit/Parameters/DO_Exception";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: radio
-        Ref:  Site_Record/Parameters/EC_Units
+        Ref:  Site_Visit/Parameters/EC_Exception
      */
-    public static View get_SiteRecord_Parameters_ECUnits(Solo solo) {
-        String ref = "Site_Record/Parameters/EC_Units";
+    public static View get_SiteVisit_Parameters_ECException(Solo solo) {
+        String ref = "Site_Visit/Parameters/EC_Exception";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: radio
-        Ref:  Site_Record/Parameters/Ecoli_Exception
+        Ref:  Site_Visit/Parameters/EC_Units
      */
-    public static View get_SiteRecord_Parameters_EcoliException(Solo solo) {
-        String ref = "Site_Record/Parameters/Ecoli_Exception";
+    public static View get_SiteVisit_Parameters_ECUnits(Solo solo) {
+        String ref = "Site_Visit/Parameters/EC_Units";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: radio
-        Ref:  Site_Record/Parameters/NO3_Exception
+        Ref:  Site_Visit/Parameters/Ecoli_Exception
      */
-    public static View get_SiteRecord_Parameters_NO3Exception(Solo solo) {
-        String ref = "Site_Record/Parameters/NO3_Exception";
+    public static View get_SiteVisit_Parameters_EcoliException(Solo solo) {
+        String ref = "Site_Visit/Parameters/Ecoli_Exception";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: radio
-        Ref:  Site_Record/Parameters/Other_Test_Exception
+        Ref:  Site_Visit/Parameters/NO3_Exception
      */
-    public static View get_SiteRecord_Parameters_OtherTestException(Solo solo) {
-        String ref = "Site_Record/Parameters/Other_Test_Exception";
+    public static View get_SiteVisit_Parameters_NO3Exception(Solo solo) {
+        String ref = "Site_Visit/Parameters/NO3_Exception";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: radio
-        Ref:  Site_Record/Parameters/Temp_Exception
+        Ref:  Site_Visit/Parameters/Other_Test_Exception
      */
-    public static View get_SiteRecord_Parameters_TempException(Solo solo) {
-        String ref = "Site_Record/Parameters/Temp_Exception";
+    public static View get_SiteVisit_Parameters_OtherTestException(Solo solo) {
+        String ref = "Site_Visit/Parameters/Other_Test_Exception";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: radio
-        Ref:  Site_Record/Parameters/Turb_FTU_FAU_Exception
+        Ref:  Site_Visit/Parameters/Temp_Exception
      */
-    public static View get_SiteRecord_Parameters_TurbFTUFAUException(Solo solo) {
-        String ref = "Site_Record/Parameters/Turb_FTU_FAU_Exception";
+    public static View get_SiteVisit_Parameters_TempException(Solo solo) {
+        String ref = "Site_Visit/Parameters/Temp_Exception";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: radio
-        Ref:  Site_Record/Parameters/Turb_NTU_Exception
+        Ref:  Site_Visit/Parameters/Turb_FTU_FAU_Exception
      */
-    public static View get_SiteRecord_Parameters_TurbNTUException(Solo solo) {
-        String ref = "Site_Record/Parameters/Turb_NTU_Exception";
+    public static View get_SiteVisit_Parameters_TurbFTUFAUException(Solo solo) {
+        String ref = "Site_Visit/Parameters/Turb_FTU_FAU_Exception";
         return (android.view.View) solo.getView((Object) ref);
     }
 
     /*
         Type: radio
-        Ref:  Site_Record/Parameters/pH_Exception
+        Ref:  Site_Visit/Parameters/Turb_NTU_Exception
      */
-    public static View get_SiteRecord_Parameters_pHException(Solo solo) {
-        String ref = "Site_Record/Parameters/pH_Exception";
+    public static View get_SiteVisit_Parameters_TurbNTUException(Solo solo) {
+        String ref = "Site_Visit/Parameters/Turb_NTU_Exception";
+        return (android.view.View) solo.getView((Object) ref);
+    }
+
+    /*
+        Type: radio
+        Ref:  Site_Visit/Parameters/pH_Exception
+     */
+    public static View get_SiteVisit_Parameters_pHException(Solo solo) {
+        String ref = "Site_Visit/Parameters/pH_Exception";
         return (android.view.View) solo.getView((Object) ref);
     }
 
