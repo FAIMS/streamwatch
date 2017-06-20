@@ -20,7 +20,7 @@
 
 <Site>
   <Site_Info>
-    <Site_Site_Name f="id">
+    <Site_Site_Name f="id notnull">
       Site Name
       <str>
         <pos>1</pos>
@@ -29,27 +29,27 @@
     </Site_Site_Name>
     <gps/>
     <Comments/>
-    <Add_New_Record   t="button"   lc="Site_Record"/>
-    <Existing_Records t="dropdown" ec="Site_Record"/>
+    <Add_New_Visit   t="button"   lc="Site_Visit"/>
+    <Existing_Site_Visits t="list" ec="Site_Visit"/>
   </Site_Info>
 </Site>
 
-<Site_Record>
+<Site_Visit>
   <Record>
     <cols>
-      <Site_Record_Site_Name f="id" i="Site/Site_Info/Site_Site_Name">
+      <Site_Visit_Site_Name f="id" i="Site/Site_Info/Site_Site_Name">
         Site Name
         <str>
           <pos>3</pos>
           <fmt>$2-</fmt>
         </str>
-      </Site_Record_Site_Name>
-      <Site_Record_ID f="id autonum">
+      </Site_Visit_Site_Name>
+      <Site_Visit_ID f="id autonum">
         <str>
           <pos>1</pos>
           <fmt>REC-$2-</fmt>
         </str>
-      </Site_Record_ID>
+      </Site_Visit_ID>
     </cols>
     <cols>
       <author f="id readonly">
@@ -113,33 +113,33 @@
   </Record>
   <Parameters>
     <cols>
-      <Available_Phosphate_mg_L b="decimal" f="notnull">
+      <Available_Phosphate_mg_L b="decimal">
         Available Phosphate (mg/L)
       </Available_Phosphate_mg_L>
-      <AP_Exception t="radio" f="nocertainty noannotation">
+      <AP_Exception t="radio" f="nocertainty noannotation notnull">
         <!--@SOURCE: vocabs/exception.xml-->
       </AP_Exception>
     </cols>
     <cols>
-      <Dissolved_Oxygen_mh_L b="decimal" f="notnull">
+      <Dissolved_Oxygen_mh_L b="decimal">
         Dissolved Oxygen (mh/L)
       </Dissolved_Oxygen_mh_L>
-      <DO_Exception t="radio" f="nocertainty noannotation">
+      <DO_Exception t="radio" f="nocertainty noannotation notnull">
         <!--@SOURCE: vocabs/exception.xml-->
       </DO_Exception>
     </cols>
     <cols>
-      <Ecoli_Petrifilm_CFU_100mL b="decimal" f="notnull">
+      <Ecoli_Petrifilm_CFU_100mL b="decimal">
         Ecoli - Petrifilm (CFU/100mL)
       </Ecoli_Petrifilm_CFU_100mL>
-      <Ecoli_Exception t="radio" f="nocertainty noannotation">
+      <Ecoli_Exception t="radio" f="nocertainty noannotation notnull">
         <!--@SOURCE: vocabs/exception.xml-->
       </Ecoli_Exception>
     </cols>
     <cols>
-      <Electrical_Conductivity b="decimal" f="notnull"/>
+      <Electrical_Conductivity b="decimal"/>
       <col>
-        <EC_Units t="radio" f="nocertainty noannotation">
+        <EC_Units t="radio" f="nocertainty noannotation notnull">
           <opts>
             <opt>μs/cm</opt>
             <opt>mS/cm</opt>
@@ -151,43 +151,43 @@
       </col>
     </cols>
     <cols>
-      <Turbidity_NTU b="decimal" f="notnull">
+      <Turbidity_NTU b="decimal">
         Turbidity (NTU)
       </Turbidity_NTU>
-      <Turb_NTU_Exception t="radio" f="nocertainty noannotation">
+      <Turb_NTU_Exception t="radio" f="nocertainty noannotation notnull">
         Turb. NTU Exception
         <!--@SOURCE: vocabs/exception.xml-->
       </Turb_NTU_Exception>
     </cols>
     <cols>
-      <Turbidity_FTU_FAU b="decimal" f="notnull">
+      <Turbidity_FTU_FAU b="decimal">
         Turbidity (FTU/FAU)
       </Turbidity_FTU_FAU>
-      <Turb_FTU_FAU_Exception t="radio" f="nocertainty noannotation">
+      <Turb_FTU_FAU_Exception t="radio" f="nocertainty noannotation notnull">
         Turb. FTU/FAU Exception
         <!--@SOURCE: vocabs/exception.xml-->
       </Turb_FTU_FAU_Exception>
     </cols>
     <cols>
-      <Temperature_C b="decimal" f="notnull">
+      <Temperature_C b="decimal">
         Temperature (°C)
       </Temperature_C>
-      <Temp_Exception t="radio" f="nocertainty noannotation">
+      <Temp_Exception t="radio" f="nocertainty noannotation notnull">
         Temp. Exception
         <!--@SOURCE: vocabs/exception.xml-->
       </Temp_Exception>
     </cols>
     <cols>
-      <pH b="decimal" f="notnull"/>
-      <pH_Exception t="radio" f="nocertainty noannotation">
+      <pH b="decimal"/>
+      <pH_Exception t="radio" f="nocertainty noannotation notnull">
         <!--@SOURCE: vocabs/exception.xml-->
       </pH_Exception>
     </cols>
     <cols>
-      <Nitrate_mg_L b="decimal" f="notnull">
+      <Nitrate_mg_L b="decimal">
         Nitrate (mg/L)
       </Nitrate_mg_L>
-      <NO3_Exception t="radio" f="nocertainty noannotation">
+      <NO3_Exception t="radio" f="nocertainty noannotation notnull">
         <!--@SOURCE: vocabs/exception.xml-->
       </NO3_Exception>
     </cols>
@@ -210,7 +210,7 @@
     <Check_out t="button" f="readonly"/>
     <Time_Checked_out/>
   </Parameters>
-</Site_Record>
+</Site_Visit>
 
 <logic><![CDATA[
   <!--@SOURCE: logic/check-in-out-button.bsh-->
