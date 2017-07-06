@@ -19,7 +19,7 @@
 </Control>
 
 <Site>
-  <Site_Info>
+  <Site_Info f="noscroll">
     <Site_Site_Name f="id notnull">
       Site Name
       <str>

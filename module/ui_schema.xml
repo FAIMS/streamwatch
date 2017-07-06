@@ -300,7 +300,7 @@
     </group>
     <group ref="Site" faims_archent_type="Site">
       <label>{Site}</label>
-      <group ref="Site_Info">
+      <group ref="Site_Info" faims_scrollable="false">
         <label>{Site_Info}</label>
         <input faims_attribute_name="Site Site Name" faims_attribute_type="measure" ref="Site_Site_Name" faims_style_class="required">
           <label>{Site_Name}</label>
