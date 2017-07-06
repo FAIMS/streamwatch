@@ -12,5 +12,5 @@ checkOut() {
   String now = getTimestampNow();
   setFieldValue(ref, now);
 
-  validateSiteRecord();
+  validateSiteVisit();
 }
