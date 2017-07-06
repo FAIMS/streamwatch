@@ -1,5 +1,5 @@
 /*
- * GENERATED WITH FAIMS-TOOLS, SHA1: e5e92dfb11ae7ece831cd32dfb3c1c3ead956750
+ * GENERATED WITH FAIMS-TOOLS, SHA1: a7244dd98d16bb9aee8b65205c08ffa8a3d104c9
  */
 import android.util.Log;
 import android.os.Build.MODEL;
@@ -145,6 +145,7 @@ List    TAB_GROUPS_AS_LIST             = new ArrayList();
 HashSet TAB_GROUPS_AS_HASH_SET         = null;
 List    TABS_AS_LIST                   = new ArrayList();
 HashSet TABS_AS_HASH_SET               = null;
+HashMap ATTRIB_NAMES_NON_STANDARD      = new HashMap();
 
 REF_TO_TYPE.put("Login/Group_Login/Group_Name", "dropdown");
 REF_TO_TYPE.put("Login/Group_Login/Log_in", "button");
@@ -153,16 +154,13 @@ REF_TO_TYPE.put("Login/Group_Login/Sign_up", "button");
 REF_TO_TYPE.put("Control/Main/Add_New_Site", "button");
 REF_TO_TYPE.put("Control/Main/Next_Site_Visit_ID", "input");
 REF_TO_TYPE.put("Control/Main/List_of_Sites", "list");
-REF_TO_TYPE.put("Control/Search", "group");
 REF_TO_TYPE.put("Control/Search/Search_Term", "input");
 REF_TO_TYPE.put("Control/Search/Search_Button", "button");
 REF_TO_TYPE.put("Control/Search/Entity_Types", "dropdown");
 REF_TO_TYPE.put("Control/Search/Entity_List", "list");
 REF_TO_TYPE.put("Site/Site_Info/Site_Site_Name", "input");
-REF_TO_TYPE.put("Site/Site_Info", "group");
 REF_TO_TYPE.put("Site/Site_Info/Latitude", "input");
 REF_TO_TYPE.put("Site/Site_Info/Longitude", "input");
-REF_TO_TYPE.put("Site/Site_Info", "group");
 REF_TO_TYPE.put("Site/Site_Info/Northing", "input");
 REF_TO_TYPE.put("Site/Site_Info/Easting", "input");
 REF_TO_TYPE.put("Site/Site_Info/Accuracy", "input");
@@ -170,10 +168,8 @@ REF_TO_TYPE.put("Site/Site_Info/Take_From_GPS_1", "button");
 REF_TO_TYPE.put("Site/Site_Info/Comments", "input");
 REF_TO_TYPE.put("Site/Site_Info/Add_New_Visit", "button");
 REF_TO_TYPE.put("Site/Site_Info/Existing_Site_Visits", "list");
-REF_TO_TYPE.put("Site_Visit/Record", "group");
 REF_TO_TYPE.put("Site_Visit/Record/Site_Visit_Site_Name", "input");
 REF_TO_TYPE.put("Site_Visit/Record/Site_Visit_ID", "input");
-REF_TO_TYPE.put("Site_Visit/Record", "group");
 REF_TO_TYPE.put("Site_Visit/Record/Site_Visit_author", "input");
 REF_TO_TYPE.put("Site_Visit/Record/Data_recorded_by", "input");
 REF_TO_TYPE.put("Site_Visit/Record/Check_in", "button");
@@ -182,41 +178,37 @@ REF_TO_TYPE.put("Site_Visit/Record/Last_Rainfall", "dropdown");
 REF_TO_TYPE.put("Site_Visit/Record/Rainfall_Description", "dropdown");
 REF_TO_TYPE.put("Site_Visit/Record/Flow_magnitude", "dropdown");
 REF_TO_TYPE.put("Site_Visit/Record/Observation", "input");
-REF_TO_TYPE.put("Site_Visit/Parameters", "group");
 REF_TO_TYPE.put("Site_Visit/Parameters/Available_Phosphate_mg_L", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/AP_Exception", "radio");
-REF_TO_TYPE.put("Site_Visit/Parameters", "group");
 REF_TO_TYPE.put("Site_Visit/Parameters/Dissolved_Oxygen_mh_L", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/DO_Exception", "radio");
-REF_TO_TYPE.put("Site_Visit/Parameters", "group");
 REF_TO_TYPE.put("Site_Visit/Parameters/Ecoli_Petrifilm_CFU_100mL", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/Ecoli_Exception", "radio");
-REF_TO_TYPE.put("Site_Visit/Parameters", "group");
 REF_TO_TYPE.put("Site_Visit/Parameters/Electrical_Conductivity", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/EC_Units", "radio");
 REF_TO_TYPE.put("Site_Visit/Parameters/EC_Exception", "radio");
-REF_TO_TYPE.put("Site_Visit/Parameters", "group");
 REF_TO_TYPE.put("Site_Visit/Parameters/Turbidity_NTU", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/Turb_NTU_Exception", "radio");
-REF_TO_TYPE.put("Site_Visit/Parameters", "group");
 REF_TO_TYPE.put("Site_Visit/Parameters/Turbidity_FTU_FAU", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/Turb_FTU_FAU_Exception", "radio");
-REF_TO_TYPE.put("Site_Visit/Parameters", "group");
 REF_TO_TYPE.put("Site_Visit/Parameters/Temperature_C", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/Temp_Exception", "radio");
-REF_TO_TYPE.put("Site_Visit/Parameters", "group");
 REF_TO_TYPE.put("Site_Visit/Parameters/pH", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/pH_Exception", "radio");
-REF_TO_TYPE.put("Site_Visit/Parameters", "group");
 REF_TO_TYPE.put("Site_Visit/Parameters/Nitrate_mg_L", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/NO3_Exception", "radio");
-REF_TO_TYPE.put("Site_Visit/Parameters", "group");
 REF_TO_TYPE.put("Site_Visit/Parameters/Other_Test_Name", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/Other_Test_Values", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/Other_Test_Exception", "radio");
 REF_TO_TYPE.put("Site_Visit/Parameters/Comments", "input");
 REF_TO_TYPE.put("Site_Visit/Parameters/Check_out", "button");
 REF_TO_TYPE.put("Site_Visit/Parameters/Time_Checked_out", "input");
+REF_TO_TYPE.put("Login/Group_Login", "tab");
+REF_TO_TYPE.put("Control/Main", "tab");
+REF_TO_TYPE.put("Control/Search", "tab");
+REF_TO_TYPE.put("Site/Site_Info", "tab");
+REF_TO_TYPE.put("Site_Visit/Record", "tab");
+REF_TO_TYPE.put("Site_Visit/Parameters", "tab");
 
 DATA_REFS.add("Site/Site_Info/Site_Site_Name");
 DATA_REFS.add("Site/Site_Info/Latitude");
@@ -276,6 +268,9 @@ TABS_AS_LIST.add("Control/Search");
 TABS_AS_LIST.add("Site/Site_Info");
 TABS_AS_LIST.add("Site_Visit/Record");
 TABS_AS_LIST.add("Site_Visit/Parameters");
+
+ATTRIB_NAMES_NON_STANDARD.put("Site/Site_Info/Comments", "Site Comments");
+ATTRIB_NAMES_NON_STANDARD.put("Site_Visit/Parameters/Comments", "Site Visit Comments");
 
 String getType(String ref) {
   String type = REF_TO_TYPE.get(ref);
@@ -494,12 +489,13 @@ String guessArch16nVal(String ref) {
 
 String getAttributeName(String ref) {
   String guiElementRef = getGuiElementRef(ref);
-  if (isNull(guiElementRef)) {
+  if (isNull(guiElementRef))
     return null;
-  }
 
-  String attributeName = guiElementRef.replaceAll("_", " ");
-  return attributeName;
+  if (ATTRIB_NAMES_NON_STANDARD.containsKey(ref))
+    return ATTRIB_NAMES_NON_STANDARD.get(ref);
+
+  return guiElementRef.replaceAll("_", " ");
 }
 
 String getArchEntType(String ref) {
@@ -549,9 +545,15 @@ String getArchEntTypePascalCased(String ref) {
 /*         first time the tab group is saved as well as subsequent            */
 /*         onSave(String, Boolean) calls.                                     */
 /*                                                                            */
-/* A single call to `bindOnEvents` must occur after all the `addOnEvent` and  */
-/* `delOnEvents` calls. Calling `bindOnEvents` is what actually establishes   */
-/* the bindings once they have been added to the accumulator.                 */
+/* Additionally, the binding accumulator augments the "load" event so that    */
+/* the `statement` in addOnEvent("module", "load", statement) gets executed   */
+/* after the module has finished loading. (That is, when this script has been */
+/* loaded, including the execution of any asynchronous functions.)            */
+/*                                                                            */
+/* Importantly, a single call to `bindOnEvents` must occur after all the      */
+/* `addOnEvent` and `delOnEvents` calls. Calling `bindOnEvents` is what       */
+/* actually establishes the bindings once they have been added to the         */
+/* accumulator.                                                               */
 /******************************************************************************/
 // This counts the number of _a_synchonrous jobs before the module is considered
 // to be loaded.
@@ -1284,9 +1286,12 @@ void enqueueTestFiles(String cb) {
 void enqueueTestFiles(int numFiles, String cb) {
   if (isNull(PERF_TEST_IMG)) {
     String head; String body;
-    head  = "Could Not Enqueue Test Files";
+    head  = "Record Creation Aborted";
     body  = "The master file from which test files are enqueued could not be ";
-    body += "found on disk.";
+    body += "found on disk. Record creation cannot take place unless this file";
+    body += " is present. Please ensure that your device is connected to the ";
+    body += "internet, re-load the module, and try to run a create dummy ";
+    body += "records again.";
     showWarning(head, body);
     return;
   }
@@ -1329,7 +1334,7 @@ PerfImageDownloader() {
     String filStr = "/sdcard/faims/modules/" + getModuleId() +
         "/files/app/test.jpg";
     String urlStr = "https://raw.githubusercontent.com/FAIMS/FAIMS-Tools/" +
-        "autogen-py/test-images/construction-2894x1924.jpg";
+        "master/test-images/construction-2894x1924.jpg";
 
     if (detectFile(filStr))
       return;
@@ -1525,8 +1530,10 @@ void setUpPerfActionBarItems() {
   removeActionBarItem("enable_record_creation");
 
   String userMenuTabGroup = getTabGroupRef(USER_MENU_PATH);
-  if (!isDisplayed(userMenuTabGroup))
+  if (!isDisplayed(userMenuTabGroup)) {
+    PERF_ALLOW_CREATION = false;
     return;
+  }
   if (!isInPerfTestTime())
     return;
 
@@ -1593,6 +1600,8 @@ void insertIntoLocalSettings(String ref) {
 }
 
 void insertIntoLocalSettings(String key, String val) {
+  if (val == null) val = "";
+
   String q = "REPLACE INTO localSettings(key, value) VALUES(%s, %s)";
   q = dbReplaceFirst(q, key);
   q = dbReplaceFirst(q, val);
@@ -1717,21 +1726,29 @@ void persistOverSessions(String ref) {
 /*                                                                            */
 /* Provides an easy way to copy field values, even between vocabs.            */
 /******************************************************************************/
+boolean isSelected(String ref, String vocabName) {
+  String vocabNameActual = getMenuValue(ref);
+
+  if (vocabNameActual == null)
+    return vocabNameActual == vocabName;
+  else
+    return vocabNameActual.equals(vocabName);
+}
+
 boolean setMenuValue(String ref, String vocabName) {
   String attrName = getAttributeName(ref);
   String vocabId = getVocabId(attrName, vocabName);
 
   if (isNull(vocabId))
     return false;
-  else {
-    setFieldValue(ref, vocabId);
-    return true;
-  }
+
+  setFieldValue(ref, vocabId);
+  return isSelected(ref, vocabName);
 }
 
-void copyFieldValue(String src, String dst) {
+boolean copyFieldValue(String src, String dst) {
   Boolean doFindVocabId = true;
-  copyFieldValue(src, dst, doFindVocabId);
+  return copyFieldValue(src, dst, doFindVocabId);
 }
 
 /* `src`           The ref of the source field.
@@ -1746,7 +1763,7 @@ void copyFieldValue(String src, String dst) {
  *                 If `doFindVocabId` is false, the value returned by
  *                 `getFieldValue` is copied, without any database accesses.
  */
-void copyFieldValue(String src, String dst, Boolean doFindVocabId) {
+boolean copyFieldValue(String src, String dst, Boolean doFindVocabId) {
   String vocabIdSrc   = getFieldValue(src);
   String vocabNameSrc = getFieldValue(src, true);
 
@@ -1755,22 +1772,15 @@ void copyFieldValue(String src, String dst, Boolean doFindVocabId) {
 
   if (attrNameSrc.equals(attrNameDst) || !doFindVocabId) {
     setFieldValue(dst, vocabIdSrc);
-    return;
+    return true;
   }
 
-  if (!setMenuValue(dst, vocabNameSrc)) {
-    // Fall back to dumb field copying
-    copyFieldValue(src, dst, false);
-  }
-}
+  if (setMenuValue(dst, vocabNameSrc))
+    return true;
 
-boolean isSelected(String ref, String vocabName) {
-  String vocabNameActual = getMenuValue(ref);
-
-  if (vocabNameActual == null)
-    return vocabNameActual == vocabName;
-  else
-    return vocabNameActual.equals(vocabName);
+  // Fall back to dumb field copying
+  copyFieldValue(src, dst, false);
+  return false;
 }
 
 void clearField(String ref) {
@@ -1781,6 +1791,16 @@ void clearField(String ref) {
   }
 }
 
+/* Copies the value from the field at `src` to the field at `dst` whenever the
+ * a new record containing `dst` is created.
+ *
+ * `doCheckParent` If this is true, the value is only copied when the parent tab
+ *                 group of the tab group referred to by `dst` is equal to the
+ *                 tab group referred to by `src`. This is a way of checking
+ *                 whether the field referred to by `src` has been loaded.
+ * `doFindVocabId` Same as the `doFindVocabId` argument for the `copyFieldValue`
+ *                 function.
+ */
 void inheritFieldValue(
     String src,
     String dst,
@@ -1807,7 +1827,7 @@ void inheritFieldValue(
  * if `getTabGroupRef(src)` was the previously displayed tab group.
  */
 void inheritFieldValue(String src, String dst, boolean doCheckParent) {
-  inheritFieldValue(src, dst, doCheckParent, false);
+  inheritFieldValue(src, dst, doCheckParent, true);
 }
 
 void inheritFieldValue(String src, String dst) {
@@ -1880,6 +1900,9 @@ void makeVocabs() {
 }
 
 void makeVocab(String ref) {
+  if (!hasMenuType(ref))
+    return;
+
   if (hasVpRef(ref))
     makeVocab(getMakeVocabType(ref), ref, getAttributeName(getVpRef(ref)));
   else
@@ -1904,9 +1927,6 @@ void makeVocab(
     List   vocabExclusions,
     String callbackFunction
 ){
-  if (!hasMenuType(ref))
-    return;
-
   if (
       isNull(type) ||
       isNull(ref) ||
@@ -2312,7 +2332,7 @@ String getUserMenuValue(int i) {
 }
 
 void resetUser() {
-  userId   = "0";
+  userId   = "";
   username = "";
   User user = new User(userId, "", "", "", "");
   setUser(user);
@@ -2571,27 +2591,27 @@ addOnEvent("Site_Visit", "show", "onShowSiteVisit()");
 
 
 
-void onClickControlMainAddNewSite () {
+void onClickControlAddNewSite () {
   parentTabgroup__ = "Control";
   newSite();
 }
 
-void onValidClickLoginGroupLoginLogin () {
+void onValidClickLoginLogin () {
   newTab("Control", true);
 }
 
 
 
-void onClickLoginGroupLoginLogin () {
-  showVerifyUserDialog("onValidClickLoginGroupLoginLogin()");
+void onClickLoginLogin () {
+  showVerifyUserDialog("onValidClickLoginLogin()");
 }
 
-void onClickSiteSiteInfoAddNewVisit () {
+void onClickSiteAddNewVisit () {
   newSiteVisit("Site");
 }
-addOnEvent("Control/Main/Add_New_Site", "click", "onClickControlMainAddNewSite()");
-addOnEvent("Login/Group_Login/Log_in", "click", "onClickLoginGroupLoginLogin()");
-addOnEvent("Site/Site_Info/Add_New_Visit", "click", "onClickSiteSiteInfoAddNewVisit()");
+addOnEvent("Control/Main/Add_New_Site", "click", "onClickControlAddNewSite()");
+addOnEvent("Login/Group_Login/Log_in", "click", "onClickLoginLogin()");
+addOnEvent("Site/Site_Info/Add_New_Visit", "click", "onClickSiteAddNewVisit()");
 
 /******************************************************************************/
 /*                   AUDIO, CAMERA, FILE AND VIDEO BINDINGS                   */
@@ -3482,7 +3502,7 @@ checkOut() {
   String now = getTimestampNow();
   setFieldValue(ref, now);
 
-  validateSiteRecord();
+  validateSiteVisit();
 }
 /********************************** COPYING ***********************************/
 clearTimeCheckedIn() {

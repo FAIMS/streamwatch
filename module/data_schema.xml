@@ -37,7 +37,7 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Comments" type="measure">
+    <property name="Site Comments" type="measure">
       <description></description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
@@ -140,6 +140,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{OK}
+<description></description></term>
         <term>{Not_Tested}
 <description></description></term>
         <term>{Over_Range}
@@ -158,6 +160,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{OK}
+<description></description></term>
         <term>{Not_Tested}
 <description></description></term>
         <term>{Over_Range}
@@ -176,6 +180,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{OK}
+<description></description></term>
         <term>{Not_Tested}
 <description></description></term>
         <term>{Over_Range}
@@ -205,6 +211,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{OK}
+<description></description></term>
         <term>{Not_Tested}
 <description></description></term>
         <term>{Over_Range}
@@ -223,6 +231,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{OK}
+<description></description></term>
         <term>{Not_Tested}
 <description></description></term>
         <term>{Over_Range}
@@ -241,6 +251,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{OK}
+<description></description></term>
         <term>{Not_Tested}
 <description></description></term>
         <term>{Over_Range}
@@ -259,6 +271,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{OK}
+<description></description></term>
         <term>{Not_Tested}
 <description></description></term>
         <term>{Over_Range}
@@ -277,6 +291,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{OK}
+<description></description></term>
         <term>{Not_Tested}
 <description></description></term>
         <term>{Over_Range}
@@ -295,6 +311,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{OK}
+<description></description></term>
         <term>{Not_Tested}
 <description></description></term>
         <term>{Over_Range}
@@ -318,6 +336,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{OK}
+<description></description></term>
         <term>{Not_Tested}
 <description></description></term>
         <term>{Over_Range}
@@ -326,7 +346,7 @@
 <description></description></term>
       </lookup>
     </property>
-    <property name="Comments" type="measure">
+    <property name="Site Visit Comments" type="measure">
       <description>
         "Report unusual results or changes to your sampling site to your
         regional coordinator on: 02 9320 6422. Pollution incident reporting

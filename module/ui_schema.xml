@@ -344,7 +344,7 @@
         <trigger ref="Take_From_GPS_1">
           <label>{Take_From_GPS}</label>
         </trigger>
-        <input faims_attribute_name="Comments" faims_attribute_type="measure" ref="Comments">
+        <input faims_attribute_name="Site Comments" faims_attribute_type="measure" ref="Comments">
           <label>{Comments}</label>
         </input>
         <trigger ref="Add_New_Visit">
@@ -626,7 +626,7 @@
             </select1>
           </group>
         </group>
-        <input faims_attribute_name="Comments" faims_attribute_type="measure" ref="Comments">
+        <input faims_attribute_name="Site Visit Comments" faims_attribute_type="measure" ref="Comments">
           <label>{Comments}</label>
         </input>
         <trigger ref="Check_out" faims_read_only="true">
