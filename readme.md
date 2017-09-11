@@ -38,13 +38,13 @@ If you have any questions about the module, please contact the FAIMS team at **e
 ## Screenshots:
 
 <p align="left">
-  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_load.png" width="250"/>
-  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/streamwatch_parametres.jpg" height="350"/>
+  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_load.png" width="270"/>
+  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/streamwatch_parametres.jpg" width="270"/>
 </p>
 
 <p align="left">
-  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_parametres.png" width="250"/>
-  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_site_visit.png" width="250"/>
-  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_search.png" width="250"/>
+  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_parametres.png" width="270"/>
+  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_site_visit.png" width="270"/>
+  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_search.png" width="270"/>
 </p>
 
