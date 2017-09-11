@@ -37,9 +37,9 @@ If you have any questions about the module, please contact the FAIMS team at **e
 
 ## Screenshots:
 
-![Streamwatch module loading page screenshot](https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_load.png) ![Streamwatch module Site Visit Tab screenshot](https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_site_visit.png) 
+<p align="center">
+  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_load.png" width="350"/>
+  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_site_visit.png" width="350"/>
+</p>
 
-![Streamwatch module Parametres Tab screenshot](https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_parametres.png) ![Streamwatch module Search Tab screenshot](https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_search.png)
-
-![Streamwatch module Parametres Tab on the device](https://github.com/FAIMS/streamwatch/blob/master/screenshots/streamwatch_parametres.jpg)
 
