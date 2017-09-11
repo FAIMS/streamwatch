@@ -34,3 +34,15 @@ This module is part of the **FAIMS Demo library** on our publicly accessible Dem
 For more details about the **Streamwatch project** please visit https://www.streamwatch.org.au/. If you have any questions about the Streamwatch project, contact streamwatch@austmus.gov.au
 
 If you have any questions about the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you within one business day.
+
+## Screenshots:
+
+![Streamwatch module loading page screenshot](https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_load.png)
+
+![Streamwatch module Site Visit Tab screenshot](https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_site_visit.png)
+
+![Streamwatch module Parametres Tab screenshot](https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_parametres.png)
+
+![Streamwatch module Parametres Tab on the device](https://github.com/FAIMS/streamwatch/blob/master/screenshots/streamwatch_parametres.jpg)
+
+![Streamwatch module Search Tab screenshot](https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_search.png)
