@@ -38,13 +38,13 @@ If you have any questions about the module, please contact the FAIMS team at **e
 ## Screenshots:
 
 <p align="left">
-  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_load.png" width="300"/>
-  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_site_visit.png" width="300"/>
+  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_load.png" height="600" width="300"/>
+  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_site_visit.png" height="600" width="300"/>
 </p>
 
 <p align="left">
-  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_parametres.png" width="300"/>
-    <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_search.png" width="300"/>
+  <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_parametres.png" height="600" width="300"/>
+    <img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/Screenshot_streamwatch_search.png" height="600" width="300"/>
 </p>
 
 <p align="left">
