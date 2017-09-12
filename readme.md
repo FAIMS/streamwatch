@@ -48,5 +48,5 @@ If you have any questions about the module, please contact the FAIMS team at **e
 </p>
 
 <p align="left">
-<img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/streamwatch_parametres.jpg"/>
+<img src="https://github.com/FAIMS/streamwatch/blob/master/screenshots/streamwatch_parametres.png"/>
 </p>
