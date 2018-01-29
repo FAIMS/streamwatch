@@ -5,7 +5,7 @@ This module was created for the **Streamwatch project**, based at the Australian
 This module was co-developed by Gregory McDonald at the Australian Museum and Petra Janouchova at the FAIMS Project, Department of Ancient History, Macquarie University.
  
 ## Funding:
-Development of this module was funded by the **Research Attraction and Acceleration Program (RAAP)** aimed to support innovation and investment in the New South Wales in 2016 and 2017.
+Development of this module was funded by the **Research Attraction and Acceleration Program (RAAP) NSW Department of Industry 16805/00** aimed to support innovation and investment in the New South Wales in 2016 and 2017.
 
 ## Date of release:
 June 2017 
